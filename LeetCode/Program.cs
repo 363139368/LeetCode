@@ -10,6 +10,21 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
+            //Console.WriteLine((int)(1 << 16));
+            //Console.ReadLine();
+
+            //return;
+            //for (int i = 0; i < 128; i++)
+            //{
+            //    Console.WriteLine(i.ToString() + " : " + (1 << i).ToString());
+            //}
+            //Console.ReadLine();
+            //return;
+            _3无重复字符的最长子串 temp = new _3无重复字符的最长子串();
+            Console.WriteLine(temp.LengthOfLongestSubstring("bbbbb"));
+            Console.ReadLine();
+
+            return;
             int a = 1;
             int b = 1 << 1;
             int c = 1 << 2;
@@ -19,7 +34,6 @@ namespace LeetCode
             Console.WriteLine(c);
             Console.WriteLine(d);
             int res = 0;
-            res |= b;
             res |= b;
             res |= c;
             Console.WriteLine(res);
