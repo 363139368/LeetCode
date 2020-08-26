@@ -10,19 +10,14 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
+            KMP kmp = new KMP();
+            var temp = kmp.GetNextVal("ababcabac".ToArray());
+
+            for (int i = 0; i < temp.Length; i++)
             {
-                _4寻找两个正序数组的中位数 _4 = new _4寻找两个正序数组的中位数();
-                var temp = _4.FindMedianSortedArrays(new int[] { 4 }, new int[] { 1,2,3 });
-                Console.WriteLine(temp);
-                Console.ReadLine();
-                return;
+                Console.WriteLine(temp[i] + " " + "ababcabac".Substring(0, i + 1));
             }
-            {
-                _3无重复字符的最长子串 _3 = new _3无重复字符的最长子串();
-                Console.WriteLine(_3.LengthOfLongestSubstring("bbbbb"));
-                Console.ReadLine();
-                return;
-            }
+            Console.ReadKey();
         }
     }
 }

@@ -43,10 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="1431拥有最多糖果的孩子.cs" />
+    <Compile Include="1480一维数组的动态和.cs" />
+    <Compile Include="1512好数对的数目.cs" />
     <Compile Include="3无重复字符的最长子串.cs" />
     <Compile Include="4寻找两个正序数组的中位数.cs" />
+    <Compile Include="KMP.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_1470重新排列数组.cs" />
+    <Compile Include="_1486数组异或操作.cs" />
+    <Compile Include="中缀表达式转后缀表达式.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
