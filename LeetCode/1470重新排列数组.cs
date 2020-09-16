@@ -15,7 +15,7 @@ namespace LeetCode
             int m = 0;
             for (int i = 0; i < res.Length; i++)
             {
-                if(b)
+                if (b)
                 {
                     res[i] = nums[m];
                     m++;
