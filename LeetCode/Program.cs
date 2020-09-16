@@ -11,12 +11,10 @@ namespace LeetCode
         static void Main(string[] args)
         {
             KMP kmp = new KMP();
-            var temp = kmp.GetNextVal("ababcabac".ToArray());
-
-            for (int i = 0; i < temp.Length; i++)
-            {
-                Console.WriteLine(temp[i] + " " + "ababcabac".Substring(0, i + 1));
-            }
+            string s = "abcabababc";
+            string t = "abab";
+            kmp.KMPSearch(s.ToCharArray(),t.ToCharArray());
+            Console.WriteLine("end");
             Console.ReadKey();
         }
     }

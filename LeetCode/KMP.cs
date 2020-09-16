@@ -15,9 +15,36 @@ namespace LeetCode
             int i = 0;    //s
             int j = 0;    //t
 
-            while (i < s.Length && j < t.Length)
+            while (i < s.Length || j < t.Length)
             {
+                if (i >= s.Length)
+                {
+                    return;
+                }
 
+                if (j >= t.Length)
+                {
+                    Console.WriteLine($"{i} finded!");
+                    j = nextVal[j - 1] + 1;
+                    continue;
+                }
+
+                if (j == -1)
+                {
+                    i++;
+                    j++;
+                    continue;
+                }
+
+                if (s[i] == t[j])
+                {
+                    i++;
+                    j++;
+                }
+                else
+                {
+                    j = nextVal[j];
+                }
             }
         }
         
