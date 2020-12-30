@@ -50,6 +50,7 @@
     <Compile Include="1486数组异或操作.cs" />
     <Compile Include="1512好数对的数目.cs" />
     <Compile Include="3无重复字符的最长子串.cs" />
+    <Compile Include="455分发饼干.cs" />
     <Compile Include="4寻找两个正序数组的中位数.cs" />
     <Compile Include="KMP.cs" />
     <Compile Include="Program.cs" />
