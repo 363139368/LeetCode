@@ -10,16 +10,10 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            _455分发饼干 test = new _455分发饼干();
-            var res = test.FindContentChildren(new[] { 10, 9, 8, 7 }, new[] { 5, 6, 7, 8 });
+            _135分发糖果 test = new _135分发糖果();
+            var res = test.Candy(new[] { 1, 2, 87, 87, 87, 2, 1 });
             Console.WriteLine(res);
             Console.ReadKey();
-            //KMP kmp = new KMP();
-            //string s = "abcabababc";
-            //string t = "abab";
-            //kmp.KMPSearch(s.ToCharArray(),t.ToCharArray());
-            //Console.WriteLine("end");
-            //Console.ReadKey();
         }
     }
 }
