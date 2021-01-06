@@ -10,8 +10,8 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            _135分发糖果 test = new _135分发糖果();
-            var res = test.Candy(new[] { 1, 2, 87, 87, 87, 2, 1 });
+            _605种花问题 test = new _605种花问题();
+            var res = test.CanPlaceFlowers(new[] { 1, 0, 0, 0, 0, 1 }, 2);
             Console.WriteLine(res);
             Console.ReadKey();
         }
