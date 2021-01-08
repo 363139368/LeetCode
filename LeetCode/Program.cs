@@ -10,9 +10,14 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            _605种花问题 test = new _605种花问题();
-            var res = test.CanPlaceFlowers(new[] { 1, 0, 0, 0, 0, 1 }, 2);
+            _406根据身高重建队列 test = new _406根据身高重建队列();
+            var res = test.ReconstructQueue(new int[][]
+            {
+                new int[] {7, 0}, new int[] {4, 4}, new int[] {7, 1}, new int[] {5, 0}, new int[] {6, 1},
+                new int[] {5, 2}
+            });
             Console.WriteLine(res);
+
             Console.ReadKey();
         }
     }

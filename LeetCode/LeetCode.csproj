@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="122买卖股票的最佳时机II.cs" />
     <Compile Include="1330翻转子数组得到最大的数组值.cs" />
     <Compile Include="135分发糖果.cs" />
     <Compile Include="1431拥有最多糖果的孩子.cs" />
@@ -51,6 +52,7 @@
     <Compile Include="1486数组异或操作.cs" />
     <Compile Include="1512好数对的数目.cs" />
     <Compile Include="3无重复字符的最长子串.cs" />
+    <Compile Include="406根据身高重建队列.cs" />
     <Compile Include="435无重叠区间.cs" />
     <Compile Include="452用最少数量的箭引爆气球.cs" />
     <Compile Include="455分发饼干.cs" />

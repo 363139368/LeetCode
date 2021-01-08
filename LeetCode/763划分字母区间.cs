@@ -35,7 +35,32 @@ namespace LeetCode
             int index = 0;
             while (index < S.Length)
             {
+                if (index == endIndex)
+                {
+                    res.Add(index - startIndex + 1);
+                    index = endIndex + 1;
+                    startIndex = endIndex + 1;
+                    if(startIndex >= S.Length)
+                        break;
+                    endIndex = dic[S[startIndex]].EndIndex;
+                    continue;
+                }
 
+                if (index == startIndex)
+                {
+                    index++;
+                    continue;
+                }
+
+                var info = dic[S[index]];
+                if (info.EndIndex <= endIndex)
+                {
+                    index++;
+                    continue;
+                }
+
+                endIndex = info.EndIndex;
+                index++;
             }
 
             return res;
