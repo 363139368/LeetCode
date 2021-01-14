@@ -14,16 +14,41 @@ namespace LeetCode
                 return people;
             Array.Sort(people, Compare);
             var list = people.ToList();
-            int i = 0, count = list.Count;
-            while (i<count)
+            int count = list.Count;
+            for (int i = 1; i < count; i++)
             {
-                
+                int[] temp = null;
+                if (list[i][1] == 0)
+                {
+                    temp = list[i];
+                    list.RemoveAt(i);
+                    list.Insert(0, temp);
+                    continue;
+                }
+                int secondCount = list[i][1];
+                var tarIndex = 0;
+                for (int j = 0; j < i; j++)
+                {
+                    if (list[j][0] >= list[i][0])
+                        secondCount--;
+                    if(secondCount == 0)
+                    {
+                        tarIndex = j;
+                        break;
+                    }
+                }
+                if (tarIndex == i)
+                    continue;
+                temp = list[i];
+                list.RemoveAt(i);
+                list.Insert(tarIndex, temp);
             }
+            people = list.ToArray();
             return people;
         }
         public static int Compare(int [] a1, int[] a2)
         {
-            var res = a1[0].CompareTo(a2[0]);
+            var res = a2[0].CompareTo(a1[0]);
             if(res == 0)
                 res = a1[1].CompareTo(a2[1]);
             return res;
