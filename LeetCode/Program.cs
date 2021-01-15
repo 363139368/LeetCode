@@ -10,12 +10,8 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            _406根据身高重建队列 test = new _406根据身高重建队列();
-            var res = test.ReconstructQueue(new int[][]
-            {
-                new int[] {7, 0}, new int[] {4, 4}, new int[] {7, 1}, new int[] {5, 0}, new int[] {6, 1},
-                new int[] {5, 2}
-            });
+            _665非递减数列 test = new _665非递减数列();
+            var res = test.CheckPossibility(new []{-1,4,2,3});
             Console.WriteLine(res);
 
             Console.ReadKey();

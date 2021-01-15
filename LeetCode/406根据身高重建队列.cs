@@ -17,31 +17,23 @@ namespace LeetCode
             int count = list.Count;
             for (int i = 1; i < count; i++)
             {
-                int[] temp = null;
-                if (list[i][1] == 0)
-                {
-                    temp = list[i];
-                    list.RemoveAt(i);
-                    list.Insert(0, temp);
-                    continue;
-                }
                 int secondCount = list[i][1];
-                var tarIndex = 0;
-                for (int j = 0; j < i; j++)
+                int tarIndex = 0;
+                for (int ii = 0; ii < count; ii++)
                 {
-                    if (list[j][0] >= list[i][0])
+                    if (list[ii][0] >= list[i][0])
                         secondCount--;
-                    if(secondCount == 0)
+                    if (secondCount < 0)
                     {
-                        tarIndex = j;
+                        tarIndex = ii;
                         break;
                     }
                 }
-                if (tarIndex == i)
+                if(tarIndex == i)
                     continue;
-                temp = list[i];
+                var temp = list[i];
                 list.RemoveAt(i);
-                list.Insert(tarIndex, temp);
+                list.Insert(tarIndex,temp);
             }
             people = list.ToArray();
             return people;
