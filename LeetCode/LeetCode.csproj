@@ -51,6 +51,7 @@
     <Compile Include="1480一维数组的动态和.cs" />
     <Compile Include="1486数组异或操作.cs" />
     <Compile Include="1512好数对的数目.cs" />
+    <Compile Include="167两数之和II_输入有序数组.cs" />
     <Compile Include="3无重复字符的最长子串.cs" />
     <Compile Include="406根据身高重建队列.cs" />
     <Compile Include="435无重叠区间.cs" />

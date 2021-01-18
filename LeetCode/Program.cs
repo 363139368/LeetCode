@@ -10,9 +10,13 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            _665非递减数列 test = new _665非递减数列();
-            var res = test.CheckPossibility(new []{-1,4,2,3});
-            Console.WriteLine(res);
+            _167两数之和II_输入有序数组 test = new _167两数之和II_输入有序数组();
+            var res = test.TwoSum(new[] { 2, 7, 11, 15 }, 9);
+            foreach (var i in res)
+            {
+                Console.WriteLine(i);
+
+            }
 
             Console.ReadKey();
         }
