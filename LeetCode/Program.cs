@@ -10,9 +10,11 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            _167两数之和II_输入有序数组 test = new _167两数之和II_输入有序数组();
-            var res = test.TwoSum(new[] { 2, 7, 11, 15 }, 9);
-            foreach (var i in res)
+            _88合并两个有序数组 test = new _88合并两个有序数组();
+            int[] nums1 = new int[] { 4, 5, 6, 0, 0, 0 };
+            int[] nums2 = new int[] { 1, 2, 3 };
+            test.Merge(nums1, 3, nums2, 3);
+            foreach (var i in nums1)
             {
                 Console.WriteLine(i);
 
