@@ -10,16 +10,9 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            _88合并两个有序数组 test = new _88合并两个有序数组();
-            int[] nums1 = new int[] { 4, 5, 6, 0, 0, 0 };
-            int[] nums2 = new int[] { 1, 2, 3 };
-            test.Merge(nums1, 3, nums2, 3);
-            foreach (var i in nums1)
-            {
-                Console.WriteLine(i);
-
-            }
-
+            _633平方数之和 test = new _633平方数之和();
+            var res = test.JudgeSquareSum(2);
+            Console.WriteLine(res);
             Console.ReadKey();
         }
     }
