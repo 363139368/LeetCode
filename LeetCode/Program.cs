@@ -10,8 +10,8 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            _633平方数之和 test = new _633平方数之和();
-            var res = test.JudgeSquareSum(2);
+            _680验证回文字符串Ⅱ test = new _680验证回文字符串Ⅱ();
+            var res = test.ValidPalindrome("ebcbbececabbacecbbcbe");
             Console.WriteLine(res);
             Console.ReadKey();
         }
