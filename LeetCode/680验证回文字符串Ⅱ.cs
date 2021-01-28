@@ -10,14 +10,10 @@ namespace LeetCode
     {
         public bool ValidPalindrome(string s)
         {
-            bool res = true;
             int l = 0;
             int r = s.Length - 1;
 
             int errorCount = 0;
-
-            int errorL = 0;
-            int errorR = 0;
 
             while (l < r)
             {
@@ -27,16 +23,53 @@ namespace LeetCode
                     r--;
                     continue;
                 }
-
-                if (errorCount >= 1)
-                    res = false;
-
                 errorCount++;
-
-
+                break;
             }
 
-            return res;
+            if (errorCount == 0)
+                return true;
+
+            int errorL = l;
+            int errorR = r;
+
+            bool bl = true;
+
+            l = errorL + 1;
+            r = errorR;
+            while (l < r)
+            {
+                if (s[l] == s[r])
+                {
+                    l++;
+                    r--;
+                    continue;
+                }
+
+                bl = false;
+                break;
+            }
+
+            if (bl)
+                return true;
+
+            bool br = true;
+            l = errorL;
+            r = errorR - 1;
+            while (l < r)
+            {
+                if (s[l] == s[r])
+                {
+                    l++;
+                    r--;
+                    continue;
+                }
+
+                br = false;
+                break;
+            }
+
+            return br;
         }
     }
 }

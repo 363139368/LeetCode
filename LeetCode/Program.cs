@@ -10,8 +10,8 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            _680验证回文字符串Ⅱ test = new _680验证回文字符串Ⅱ();
-            var res = test.ValidPalindrome("ebcbbececabbacecbbcbe");
+            _69x的平方根 test = new _69x的平方根();
+            var res = test.MySqrt(8);
             Console.WriteLine(res);
             Console.ReadKey();
         }
