@@ -11,6 +11,8 @@ namespace LeetCode
         public int MySqrt(int x)
         {
             int res = x;
+            int min = 0;
+            int max = x;
             while (true)
             {
                 var product = res * res;
