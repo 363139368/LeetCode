@@ -10,31 +10,29 @@ namespace LeetCode
     {
         public int MySqrt(int x)
         {
-            int res = x;
+            if (x <= 1)
+                return x;
+
             int min = 0;
             int max = x;
-            while (true)
+            int sq, mid;
+            while (min <= max)
             {
-                var product = res * res;
-                if (product > x)
+                mid = min + (max - min) / 2;
+                sq = x / mid;
+
+                if (mid == sq)
+                    return mid;
+                else if (sq > mid)
                 {
-                    res /= 2;
-                }
-                else if (product < x)
-                {
-                    var temp = (int)(res * 1.5f);
-                    if (temp == res)
-                        break;
-                    else
-                        res = temp;
+                    min = mid + 1;
                 }
                 else
                 {
-                    break;
+                    max = mid - 1;
                 }
             }
-
-            return res;
+            return max;
         }
     }
 }
