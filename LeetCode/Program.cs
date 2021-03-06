@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,9 +11,21 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            _69x的平方根 test = new _69x的平方根();
-            var res = test.MySqrt(8);
-            Console.WriteLine(res);
+            var random = new Random();
+            var randomArray = new int[8];
+            for (int i = 0; i < 8; i++)
+            {
+                randomArray[i] = random.Next();
+            }
+
+            Sort sort = new Sort();
+            //sort.HeapSort(randomArray);
+            var temp = new[] {2, 6, 1, 4, 8, 9};
+            sort.HeapSort(temp);
+            foreach (var i in temp)
+            {
+                Console.WriteLine(i);
+            }
             Console.ReadKey();
         }
     }

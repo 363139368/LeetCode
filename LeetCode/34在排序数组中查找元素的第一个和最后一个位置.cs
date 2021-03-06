@@ -10,6 +10,8 @@ namespace LeetCode
     {
         public int[] SearchRange(int[] nums, int target)
         {
+            Console.WriteLine(FindDown(nums, target));
+            return null;
             var res = new int[] { -1, -1 };
             int l = 0, r = nums.Length - 1;
             while (nums[l] <= target && nums[r] >= target)
@@ -17,6 +19,46 @@ namespace LeetCode
 
             }
             return null;
+        }
+
+        private int FindDown(int[] nums, int target)
+        {
+            int l, r, m;
+            l = 0;
+            r = nums.Length - 1;
+            while (l < r)
+            {
+                m =  (r + l) / 2;
+                if (nums[m] >= target)
+                    r = m;
+                else
+                    l = m + 1;
+            }
+
+            if (nums[l] == target)
+                return l;
+            else
+                return -1;
+        }
+
+        private int FindUp(int[] nums, int target, int left)
+        {
+            int l, r, m;
+            l = 0;
+            r = nums.Length - 1;
+            while (l < r)
+            {
+                m = (r + l) / 2;
+                if (nums[m] > target)
+                    l = m + 1;
+                else
+                    r = m;
+            }
+
+            if (nums[l] == target)
+                return l;
+            else
+                return -1;
         }
     }
 }
