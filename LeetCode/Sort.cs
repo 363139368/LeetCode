@@ -9,6 +9,23 @@ namespace LeetCode
 {
     public class Sort
     {
+        public static void Show(int[] array)
+        {
+            string str = String.Empty;
+            for (int i = 0; i < array.Length; i++)
+            {
+                str += $"{array[i]}  ";
+            }
+
+            Console.WriteLine(str);
+        }
+        public static void Swap(int[] array, int a, int b)
+        {
+            var temp = array[a];
+            array[a] = array[b];
+            array[b] = temp;
+            Show(array);
+        }
         //选择排序
         public int[] SelectSort(int[] array)
         {
@@ -21,9 +38,7 @@ namespace LeetCode
                         min = ii;
                 }
 
-                var temp = array[min];
-                array[min] = array[i];
-                array[i] = temp;
+                Swap(array, min, i);
             }
 
             return array;
@@ -36,9 +51,7 @@ namespace LeetCode
             {
                 for (int ii = i; ii > 0 && array[ii] < array[ii - 1]; ii--)
                 {
-                    var temp = array[ii];
-                    array[ii] = array[ii - 1];
-                    array[ii - 1] = temp;
+                    Swap(array, ii, ii - 1);
                 }
             }
             return array;
@@ -57,9 +70,7 @@ namespace LeetCode
                 {
                     for (int j = i; j >= gap && array[j] < array[j - gap]; j -= gap)
                     {
-                        var temp = array[j];
-                        array[j] = array[j - gap];
-                        array[j - gap] = temp;
+                        Swap(array, j, j - gap);
                     }
                 }
                 gap /= 3;
@@ -111,6 +122,48 @@ namespace LeetCode
         #endregion
 
         #region 堆排序
+
+        public void MyHeapSort(int[] array)
+        {
+            BuildHeap(array);
+
+            var len = array.Length - 1;
+            while (len >= 0)
+            {
+                Swap(array, 0, len);
+                len--;
+                int i = 0;
+                while (i <= len / 2 - 1)
+                {
+                    i = Heapify(array, i, len);
+                }
+            }
+        }
+
+        private void BuildHeap(int[] array)
+        {
+            for (int i = array.Length / 2 - 1; i >= 0; i--)
+            {
+                Heapify(array, i, array.Length);
+            }
+        }
+
+        private int Heapify(int[] array, int index, int len)
+        {
+            int leftChild = index * 2 + 1;
+            int rightChild = leftChild + 1;
+            bool isHaveLeft = leftChild < len;
+            bool isHaveRight = rightChild < len;
+            if (!(isHaveRight || isHaveLeft))
+                return -1;
+            int temp = leftChild;
+            if (isHaveRight && isHaveLeft && array[leftChild] < array[rightChild])
+                temp = rightChild;
+            if (array[index] < array[temp])
+                Swap(array, temp, index);
+            return temp;
+        }
+
         public void HeapSort(int[] array)
         {
             for (int i = array.Length / 2 - 1; i >= 0; i--)
@@ -149,5 +202,30 @@ namespace LeetCode
         }
         #endregion
 
+        #region 快排
+
+        public void MyQuickSort(int[] nums, int left, int right)
+        {
+            if (left >= right)
+                return;
+
+            int i = left;
+            int j = right;
+            int mid = nums[(left + right) / 2];
+            while (true)
+            {
+                while (i < right && nums[i] < mid)
+                    i++;
+                while (j > 0 && nums[j] > mid)
+                    j--;
+                if (i == j)
+                    break;
+
+                Swap(nums, i, j);
+            }
+            MyQuickSort(nums, left, i);
+            MyQuickSort(nums, i + 1, right);
+        }
+        #endregion
     }
 }

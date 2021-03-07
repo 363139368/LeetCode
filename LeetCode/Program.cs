@@ -21,7 +21,7 @@ namespace LeetCode
             Sort sort = new Sort();
             //sort.HeapSort(randomArray);
             var temp = new[] {2, 6, 1, 4, 8, 9};
-            sort.HeapSort(temp);
+            sort.MyQuickSort(temp,0,temp.Length-1);
             foreach (var i in temp)
             {
                 Console.WriteLine(i);
