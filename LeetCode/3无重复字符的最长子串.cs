@@ -12,6 +12,48 @@ namespace LeetCode
     /// </summary>
     public class _3无重复字符的最长子串
     {
+        public int LengthOfLongestSubstring_2024(string s)
+        {
+            if(s.Length == 0) return 0;
+            int left = 0;
+            int right = 0;
+            int sum = 0;
+            Dictionary<char,int> map = new Dictionary<char,int>(128);
+            map[s[0]] = 1;
+            sum++;
+            int res = 1;
+            while (true)
+            {
+                if (right >= s.Length)
+                {
+                    break;
+                }
+                int nextRight = right + 1;
+                if (nextRight >= s.Length)
+                {
+                    break;
+                }
+                if (map.ContainsKey(s[nextRight]))
+                {
+                    map.Remove(s[left]);
+                    left++;
+                    sum--;
+                    continue;
+                }
+                else
+                {
+                    map[s[nextRight]] = 1;
+                    right = nextRight;
+                    sum++;
+                    if (sum > res)
+                    {
+                        res = sum;
+                    }
+                }
+            }
+            return res;
+        }
+
         public int LengthOfLongestSubstring_old(string s)
         {
             int sum = 0;
