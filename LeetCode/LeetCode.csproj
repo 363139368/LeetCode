@@ -71,6 +71,9 @@
     <Compile Include="76最小覆盖子串.cs" />
     <Compile Include="88合并两个有序数组.cs" />
     <Compile Include="KMP.cs" />
+    <Compile Include="LCR004只出现一次的数字II.cs" />
+    <Compile Include="LCR005最大单词长度乘积.cs" />
+    <Compile Include="LCR006两数之和II输入有序数组.cs" />
     <Compile Include="MyTree.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
