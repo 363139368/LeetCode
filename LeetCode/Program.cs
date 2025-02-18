@@ -14,33 +14,10 @@ namespace LeetCode
 
         static void Main(string[] args)
         {
-            BitCalculator tmp = new BitCalculator();
-            for (int i = 0; i < 100; i++)
-            {
-                for (int j = 0; j < 100; j++)
-                {
-                    var res = tmp.Add(i, j);
-                    Console.WriteLine($"{i} + {j} = {res}, IsOk:{res == i + j}");
-                }
-            }
-            for (int i = 0; i < 100; i++)
-            {
-                for (int j = 0; j < 100; j++)
-                {
-                    var res = tmp.Subtract(i, j);
-                    Console.WriteLine($"{i} - {j} = {res}, IsOk:{res == i - j}");
-                }
-            }
-
-            for (int i = 0; i < 100; i++)
-            {
-                for (int j = 0; j < 100; j++)
-                {
-                    var res = tmp.Multiply(i, j);
-                    Console.WriteLine($"{i} * {j} = {res}, IsOk:{res == i * j}");
-                }
-            }
-            Console.ReadKey();
+            _453最小操作次数使数组元素相等 tmp = new _453最小操作次数使数组元素相等();
+            var res = tmp.MinMoves(new int[] { 1, 1, 1 });
+            Console.WriteLine(res);
+            Console.Read();
         }
     }
 }

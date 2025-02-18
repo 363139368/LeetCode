@@ -31,7 +31,7 @@ namespace LeetCode
                 m =  (r + l) / 2;
                 if (nums[m] >= target)
                     r = m;
-                else
+                else 
                     l = m + 1;
             }
 
