@@ -8,10 +8,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>LeetCode</RootNamespace>
     <AssemblyName>LeetCode</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="0905StaticSingletonTest.cs" />
     <Compile Include="122买卖股票的最佳时机II.cs" />
     <Compile Include="1330翻转子数组得到最大的数组值.cs" />
     <Compile Include="135分发糖果.cs" />
@@ -53,11 +55,13 @@
     <Compile Include="1486数组异或操作.cs" />
     <Compile Include="1512好数对的数目.cs" />
     <Compile Include="167两数之和II_输入有序数组.cs" />
+    <Compile Include="283移动零.cs" />
     <Compile Include="340至多包含 K 个不同字符的最长子串.cs" />
     <Compile Include="34在排序数组中查找元素的第一个和最后一个位置.cs" />
     <Compile Include="3无重复字符的最长子串.cs" />
     <Compile Include="406根据身高重建队列.cs" />
     <Compile Include="435无重叠区间.cs" />
+    <Compile Include="453最小操作次数使数组元素相等.cs" />
     <Compile Include="452用最少数量的箭引爆气球.cs" />
     <Compile Include="455分发饼干.cs" />
     <Compile Include="4寻找两个正序数组的中位数.cs" />
@@ -70,7 +74,11 @@
     <Compile Include="763划分字母区间.cs" />
     <Compile Include="76最小覆盖子串.cs" />
     <Compile Include="88合并两个有序数组.cs" />
+    <Compile Include="BitCalculator.cs" />
     <Compile Include="KMP.cs" />
+    <Compile Include="LCR_001_两数相除.cs" />
+    <Compile Include="LCR_002_二进制求和.cs" />
+    <Compile Include="LCR_003_比特位计数.cs" />
     <Compile Include="MyTree.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

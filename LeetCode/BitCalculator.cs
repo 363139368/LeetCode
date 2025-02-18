@@ -47,5 +47,65 @@ namespace LeetCode
             }
             return isNeg ? Negation(res) : res;
         }
+        public int Divide(int x, int y)
+        {
+            if (x == int.MinValue && y == int.MinValue)
+            {
+                return 1;
+            }
+            if (x != int.MinValue && y != int.MinValue)
+            {
+                return div(x, y);
+            }
+            if (y == int.MinValue)
+            {
+                return 0;
+            }
+            if (y == Negation(1))
+            {
+                return int.MaxValue;
+            }
+
+            if (y > 0)
+            {
+                x = Add(x, y);
+                return Add(div(x, y), Negation(1));
+            }
+            else if (y < 0)
+            {
+                x = Add(x,Negation(y));
+                return Add(div(x, y), 1);
+            }
+            else
+            {
+                return 0;
+            }
+        }
+        public int div(int x, int y)
+        {
+            bool isNegative = (x < 0) ^ (y < 0);
+
+            if (x < 0) { x = Negation(x); }
+            if (y < 0) { y = Negation(y); }
+            
+            int res = 0;
+
+            int start = 15;
+            if (x >> 15 > y)
+            {
+                start = 30;
+            }
+            
+            for (int i = start; i >= 0; i = Subtract(i, 1))
+            {
+                var tmp = x >> i;
+                if (tmp >= y)
+                {
+                    res |= (1 << i);
+                    x = Subtract(x, y << i);
+                }
+            }
+            return isNegative ? Negation(res) : res;
+        }
     }
 }
