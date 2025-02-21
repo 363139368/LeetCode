@@ -15,10 +15,17 @@ namespace LeetCode
             val = x;
             next = null;
         }
+
+        public ListNode(int val = 0, ListNode next = null)
+        {
+            this.val = val;
+            this.next = next;
+        }
     }
 
     public class _142环形链表II
     {
+
         public ListNode DetectCycle(ListNode head)
         {
             var slow = head;

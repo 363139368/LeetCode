@@ -56,6 +56,7 @@
     <Compile Include="1512好数对的数目.cs" />
     <Compile Include="167两数之和II_输入有序数组.cs" />
     <Compile Include="189轮转数组.cs" />
+    <Compile Include="203移除链表元素.cs" />
     <Compile Include="283移动零.cs" />
     <Compile Include="340至多包含 K 个不同字符的最长子串.cs" />
     <Compile Include="34在排序数组中查找元素的第一个和最后一个位置.cs" />
