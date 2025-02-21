@@ -92,16 +92,31 @@ namespace LeetCode
             {
                 return FirstNode;
             }
+
             if (index < Count)
             {
-                int i = 0;
-                LinkNode node = FirstNode;
-                while (i != index)
+                if (index <= Count / 2)
                 {
-                    node = node.next;
-                    i++;
+                    int i = 0;
+                    LinkNode node = FirstNode;
+                    while (i != index)
+                    {
+                        node = node.next;
+                        i++;
+                    }
+                    return node;
                 }
-                return node;
+                else
+                {
+                    int i = Count - 1;
+                    LinkNode node = LastNode;
+                    while (i != index)
+                    {
+                        node = node.pre;
+                        i--;
+                    }
+                    return node;
+                }
             }
             return null;
         }
