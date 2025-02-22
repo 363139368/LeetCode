@@ -10,16 +10,20 @@ namespace LeetCode
     {
         public int val;
         public ListNode next;
+        
+        public int HashValue;
         public ListNode(int x)
         {
             val = x;
             next = null;
+            HashValue = GetHashCode();
         }
 
         public ListNode(int val = 0, ListNode next = null)
         {
             this.val = val;
             this.next = next;
+            HashValue = GetHashCode();
         }
     }
 

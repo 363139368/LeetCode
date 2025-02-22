@@ -14,21 +14,13 @@ namespace LeetCode
             if (head == null)
                 return null;
 
-            while (true)
+            while (head != null && head.val == val)
             {
-                if (head != null && head.val != val)
-                {
-                    break;
-                }
-                if (head.val == val)
-                {
-                    head = head.next;
-                }
-                if (head == null)
-                {
-                    return null;
-                }
+                head = head.next;
             }
+
+            if (head == null)
+                return null;
 
             ListNode pre = null;
             ListNode cur = head;
@@ -40,12 +32,14 @@ namespace LeetCode
                     {
                         pre.next = cur.next;
                     }
+                    cur = cur.next;
                 }
                 else
                 {
                     pre = cur;
                     cur = cur.next;
                 }
+                    
 
             }
             return head;

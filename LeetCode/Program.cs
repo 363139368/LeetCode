@@ -14,13 +14,11 @@ namespace LeetCode
 
         static void Main(string[] args)
         {
-            MyLinkedList myLinkedList = new MyLinkedList();
-            myLinkedList.AddAtHead(1);
-            myLinkedList.AddAtTail(3);
-            myLinkedList.AddAtIndex(1,2);
-            myLinkedList.Get(1);
-            myLinkedList.DeleteAtIndex(1);
-            myLinkedList.Get(1);
+            _83删除排序链表中的重复元素 myLinkedList = new _83删除排序链表中的重复元素();
+            ListNode head = new ListNode(1);
+            head.next = new ListNode(1);
+            head.next.next = new ListNode(1);
+            myLinkedList.DeleteDuplicates(head);
             Console.ReadKey();
         }
     }

@@ -56,7 +56,9 @@
     <Compile Include="1512好数对的数目.cs" />
     <Compile Include="167两数之和II_输入有序数组.cs" />
     <Compile Include="189轮转数组.cs" />
+    <Compile Include="19删除链表的倒数第 N 个结点.cs" />
     <Compile Include="203移除链表元素.cs" />
+    <Compile Include="237删除链表中的节点.cs" />
     <Compile Include="283移动零.cs" />
     <Compile Include="340至多包含 K 个不同字符的最长子串.cs" />
     <Compile Include="34在排序数组中查找元素的第一个和最后一个位置.cs" />
@@ -76,6 +78,8 @@
     <Compile Include="707设计链表.cs" />
     <Compile Include="763划分字母区间.cs" />
     <Compile Include="76最小覆盖子串.cs" />
+    <Compile Include="82删除排序链表中的重复元素II.cs" />
+    <Compile Include="83删除排序链表中的重复元素.cs" />
     <Compile Include="88合并两个有序数组.cs" />
     <Compile Include="BitCalculator.cs" />
     <Compile Include="KMP.cs" />
