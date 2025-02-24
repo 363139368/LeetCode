@@ -72,6 +72,7 @@
     <Compile Include="524通过删除字母匹配到字典里最长单词.cs" />
     <Compile Include="605种花问题.cs" />
     <Compile Include="633平方数之和.cs" />
+    <Compile Include="645错误的集合.cs" />
     <Compile Include="665非递减数列.cs" />
     <Compile Include="680验证回文字符串Ⅱ.cs" />
     <Compile Include="69x的平方根.cs" />
