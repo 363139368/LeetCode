@@ -14,11 +14,9 @@ namespace LeetCode
 
         static void Main(string[] args)
         {
-            _83删除排序链表中的重复元素 myLinkedList = new _83删除排序链表中的重复元素();
-            ListNode head = new ListNode(1);
-            head.next = new ListNode(1);
-            head.next.next = new ListNode(1);
-            myLinkedList.DeleteDuplicates(head);
+            _697数组的度 tmp = new _697数组的度();
+            tmp.FindShortestSubArray(new int[] { 1,2,2,3,1 });
+            
             Console.ReadKey();
         }
     }

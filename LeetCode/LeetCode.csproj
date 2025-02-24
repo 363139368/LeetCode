@@ -62,9 +62,11 @@
     <Compile Include="283移动零.cs" />
     <Compile Include="340至多包含 K 个不同字符的最长子串.cs" />
     <Compile Include="34在排序数组中查找元素的第一个和最后一个位置.cs" />
+    <Compile Include="396旋转函数.cs" />
     <Compile Include="3无重复字符的最长子串.cs" />
     <Compile Include="406根据身高重建队列.cs" />
     <Compile Include="435无重叠区间.cs" />
+    <Compile Include="448找到所有数组中消失的数字.cs" />
     <Compile Include="453最小操作次数使数组元素相等.cs" />
     <Compile Include="452用最少数量的箭引爆气球.cs" />
     <Compile Include="455分发饼干.cs" />
@@ -75,6 +77,7 @@
     <Compile Include="645错误的集合.cs" />
     <Compile Include="665非递减数列.cs" />
     <Compile Include="680验证回文字符串Ⅱ.cs" />
+    <Compile Include="697数组的度.cs" />
     <Compile Include="69x的平方根.cs" />
     <Compile Include="707设计链表.cs" />
     <Compile Include="763划分字母区间.cs" />
