@@ -14,8 +14,8 @@ namespace LeetCode
 
         static void Main(string[] args)
         {
-            _697数组的度 tmp = new _697数组的度();
-            tmp.FindShortestSubArray(new int[] { 1,2,2,3,1 });
+            _448找到所有数组中消失的数字 tmp = new _448找到所有数组中消失的数字();
+            tmp.FindDisappearedNumbers(new int[] { 4,3,2,7,8,2,3,1});
             
             Console.ReadKey();
         }
