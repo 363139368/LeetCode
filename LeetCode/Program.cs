@@ -14,8 +14,8 @@ namespace LeetCode
 
         static void Main(string[] args)
         {
-            _448找到所有数组中消失的数字 tmp = new _448找到所有数组中消失的数字();
-            tmp.FindDisappearedNumbers(new int[] { 4,3,2,7,8,2,3,1});
+            _41缺失的第一个正数 tmp = new _41缺失的第一个正数();
+            tmp.FirstMissingPositive(new int[] {100000, 3, 4000, 2, 15, 1, 99999});
             
             Console.ReadKey();
         }
