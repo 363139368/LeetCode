@@ -68,6 +68,7 @@
     <Compile Include="3无重复字符的最长子串.cs" />
     <Compile Include="406根据身高重建队列.cs" />
     <Compile Include="414第三大的数.cs" />
+    <Compile Include="419棋盘上的战舰.cs" />
     <Compile Include="41缺失的第一个正数.cs" />
     <Compile Include="435无重叠区间.cs" />
     <Compile Include="442数组中重复的数据.cs" />
@@ -76,10 +77,15 @@
     <Compile Include="452用最少数量的箭引爆气球.cs" />
     <Compile Include="455分发饼干.cs" />
     <Compile Include="485最大连续 1 的个数.cs" />
+    <Compile Include="48旋转图像.cs" />
     <Compile Include="495提莫攻击.cs" />
+    <Compile Include="498对角线遍历.cs" />
     <Compile Include="4寻找两个正序数组的中位数.cs" />
     <Compile Include="524通过删除字母匹配到字典里最长单词.cs" />
+    <Compile Include="54螺旋矩阵.cs" />
+    <Compile Include="566重塑矩阵.cs" />
     <Compile Include="598区间加法 II.cs" />
+    <Compile Include="59螺旋矩阵II.cs" />
     <Compile Include="605种花问题.cs" />
     <Compile Include="628三个数的最大乘积.cs" />
     <Compile Include="633平方数之和.cs" />

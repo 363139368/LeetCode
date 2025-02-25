@@ -14,8 +14,9 @@ namespace LeetCode
 
         static void Main(string[] args)
         {
-            _41缺失的第一个正数 tmp = new _41缺失的第一个正数();
-            tmp.FirstMissingPositive(new int[] {100000, 3, 4000, 2, 15, 1, 99999});
+            _566重塑矩阵 tmp = new _566重塑矩阵();
+            int[][] param = new int[2][]{new int[]{1,2}, new int[]{3,4}};
+            tmp.MatrixReshape(param,1,4);
             
             Console.ReadKey();
         }
