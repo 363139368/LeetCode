@@ -98,6 +98,7 @@
     <Compile Include="680验证回文字符串Ⅱ.cs" />
     <Compile Include="697数组的度.cs" />
     <Compile Include="69x的平方根.cs" />
+    <Compile Include="706设计哈希映射.cs" />
     <Compile Include="707设计链表.cs" />
     <Compile Include="73矩阵置零.cs" />
     <Compile Include="763划分字母区间.cs" />
