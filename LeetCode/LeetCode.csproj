@@ -48,6 +48,7 @@
     <Compile Include="118杨辉三角.cs" />
     <Compile Include="119杨辉三角 II.cs" />
     <Compile Include="122买卖股票的最佳时机II.cs" />
+    <Compile Include="128最长连续序列.cs" />
     <Compile Include="1330翻转子数组得到最大的数组值.cs" />
     <Compile Include="135分发糖果.cs" />
     <Compile Include="142环形链表II.cs" />
@@ -66,6 +67,7 @@
     <Compile Include="289生命游戏.cs" />
     <Compile Include="303区域和检索数组不可变.cs" />
     <Compile Include="340至多包含 K 个不同字符的最长子串.cs" />
+    <Compile Include="349两个数组的交集.cs" />
     <Compile Include="34在排序数组中查找元素的第一个和最后一个位置.cs" />
     <Compile Include="396旋转函数.cs" />
     <Compile Include="3无重复字符的最长子串.cs" />
