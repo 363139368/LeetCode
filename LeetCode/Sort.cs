@@ -14,16 +14,14 @@ namespace LeetCode
             string str = String.Empty;
             for (int i = 0; i < array.Length; i++)
             {
-                str += $"{array[i]}  ";
+                str += $"{i}:{array[i]} ";
             }
 
             Console.WriteLine(str);
         }
         public static void Swap(int[] array, int a, int b)
         {
-            var temp = array[a];
-            array[a] = array[b];
-            array[b] = temp;
+            (array[a], array[b]) = (array[b], array[a]);
             Show(array);
         }
         //选择排序
@@ -204,11 +202,11 @@ namespace LeetCode
 
         #region 快排
 
-        public void MyQuickSort(int[] nums, int left, int right)
+        public void MyQuickSort2(int[] nums, int left, int right)
         {
             if (left >= right)
                 return;
-
+        
             int i = left;
             int j = right;
             int mid = nums[(left + right) / 2];
@@ -220,11 +218,47 @@ namespace LeetCode
                     j--;
                 if (i == j)
                     break;
-
+        
                 Swap(nums, i, j);
             }
-            MyQuickSort(nums, left, i);
-            MyQuickSort(nums, i + 1, right);
+            MyQuickSort2(nums, left, i);
+            MyQuickSort2(nums, i + 1, right);
+        }
+
+
+        public void MyQuickSort(int[] nums)
+        {
+            QuickSort(nums, 0, nums.Length - 1);
+        }
+
+        public void QuickSort(int[] nums, int left, int right)
+        {
+            if (left >= right) return;
+            
+            int povit = Partition(nums, left, right);
+
+            QuickSort(nums, left, povit - 1);
+            QuickSort(nums, povit + 1, right);
+        }
+
+        public int Partition(int[] nums, int left, int right)
+        {
+            int i = left-1;
+            int point = nums[right];
+
+            for (int j = left; j < right; j++)
+            {
+                if (nums[j] < point)
+                {
+                    i++;
+                    Swap(nums,i,j);
+                }
+            }
+
+            Swap(nums, i + 1, right);
+            Console.WriteLine($"[Partition] point:{i+1}");
+
+            return i + 1;
         }
         #endregion
     }

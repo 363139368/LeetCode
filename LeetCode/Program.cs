@@ -12,8 +12,27 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            _205同构字符串 tmp  = new _205同构字符串();
-            tmp.IsIsomorphic("foo", "bar");
+            int[] nums = new int[10000];
+            for (int i = 0; i < nums.Length; i++)
+            {
+                nums[i] = i + 1;
+            }
+
+            // 使用随机数对数组进行乱序
+            Random rand = new Random();
+            for (int i = nums.Length - 1; i > 0; i--)
+            {
+                int j = rand.Next(0, i + 1);
+                (nums[i], nums[j]) = (nums[j], nums[i]);
+            }
+            
+            Sort.Show(nums);
+            Array.Sort(nums);
+            Sort.Show(nums);
+
+            // Sort.Show(nums);
+            // Sort sort = new Sort();
+            // sort.MyQuickSort(nums);
             Console.ReadKey();
         }
     }
