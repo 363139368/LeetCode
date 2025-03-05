@@ -51,6 +51,7 @@
     <Compile Include="128最长连续序列.cs" />
     <Compile Include="1330翻转子数组得到最大的数组值.cs" />
     <Compile Include="135分发糖果.cs" />
+    <Compile Include="138随机链表的复制.cs" />
     <Compile Include="142环形链表II.cs" />
     <Compile Include="1431拥有最多糖果的孩子.cs" />
     <Compile Include="1470重新排列数组.cs" />
