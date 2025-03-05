@@ -21,6 +21,8 @@ namespace LeetCode
         }
         public static void Swap(int[] array, int a, int b)
         {
+            Console.WriteLine($"swap index:{a} value:{array[a]} index:{b} value:{array[b]}");
+
             (array[a], array[b]) = (array[b], array[a]);
             Show(array);
         }
@@ -202,28 +204,28 @@ namespace LeetCode
 
         #region 快排
 
-        public void MyQuickSort2(int[] nums, int left, int right)
-        {
-            if (left >= right)
-                return;
+        //public void MyQuickSort2(int[] nums, int left, int right)
+        //{
+        //    if (left >= right)
+        //        return;
         
-            int i = left;
-            int j = right;
-            int mid = nums[(left + right) / 2];
-            while (true)
-            {
-                while (i < right && nums[i] < mid)
-                    i++;
-                while (j > 0 && nums[j] > mid)
-                    j--;
-                if (i == j)
-                    break;
+        //    int i = left;
+        //    int j = right;
+        //    int mid = nums[(left + right) / 2];
+        //    while (true)
+        //    {
+        //        while (i < right && nums[i] < mid)
+        //            i++;
+        //        while (j > 0 && nums[j] > mid)
+        //            j--;
+        //        if (i == j)
+        //            break;
         
-                Swap(nums, i, j);
-            }
-            MyQuickSort2(nums, left, i);
-            MyQuickSort2(nums, i + 1, right);
-        }
+        //        Swap(nums, i, j);
+        //    }
+        //    MyQuickSort2(nums, left, i);
+        //    MyQuickSort2(nums, i + 1, right);
+        //}
 
 
         public void MyQuickSort(int[] nums)
@@ -235,30 +237,30 @@ namespace LeetCode
         {
             if (left >= right) return;
             
-            int povit = Partition(nums, left, right);
+            int point = Partition(nums, left, right);
 
-            QuickSort(nums, left, povit - 1);
-            QuickSort(nums, povit + 1, right);
+            QuickSort(nums, left, point - 1);
+            QuickSort(nums, point + 1, right);
         }
 
         public int Partition(int[] nums, int left, int right)
         {
-            int i = left-1;
-            int point = nums[right];
 
-            for (int j = left; j < right; j++)
+            int i = left;
+            int j = right;
+            Console.WriteLine($"[Partition] point:{nums[left]}");
+
+            while (i < j)
             {
-                if (nums[j] < point)
-                {
-                    i++;
-                    Swap(nums,i,j);
-                }
+                while (i < j && nums[j] >= nums[left]) j--;
+                while (i < j && nums[i] <= nums[left]) i++;
+                Swap(nums, i, j);
             }
+            Swap(nums, left, i);
 
-            Swap(nums, i + 1, right);
-            Console.WriteLine($"[Partition] point:{i+1}");
+            Console.WriteLine($"[Partition] point:{i}");
 
-            return i + 1;
+            return i;
         }
         #endregion
     }
