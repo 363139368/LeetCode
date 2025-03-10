@@ -12,7 +12,7 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            int[] nums = new int[10000];
+            int[] nums = new int[30];
             for (int i = 0; i < nums.Length; i++)
             {
                 nums[i] = i + 1;
@@ -25,14 +25,14 @@ namespace LeetCode
                 int j = rand.Next(0, i + 1);
                 (nums[i], nums[j]) = (nums[j], nums[i]);
             }
-            
-            Sort.Show(nums);
-            Array.Sort(nums);
-            Sort.Show(nums);
 
-            // Sort.Show(nums);
-            // Sort sort = new Sort();
-            // sort.MyQuickSort(nums);
+            //Sort.Show(nums);
+            //Array.Sort(nums);
+            //Sort.Show(nums);
+
+            Sort.Show(nums);
+            Sort sort = new Sort();
+            sort.MyQuickSort(nums);
             Console.ReadKey();
         }
     }
