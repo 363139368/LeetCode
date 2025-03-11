@@ -12,28 +12,9 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            int[] nums = new int[30];
-            for (int i = 0; i < nums.Length; i++)
-            {
-                nums[i] = i + 1;
-            }
-
-            // 使用随机数对数组进行乱序
-            Random rand = new Random();
-            for (int i = nums.Length - 1; i > 0; i--)
-            {
-                int j = rand.Next(0, i + 1);
-                (nums[i], nums[j]) = (nums[j], nums[i]);
-            }
-
-            //Sort.Show(nums);
-            //Array.Sort(nums);
-            //Sort.Show(nums);
-
-            Sort.Show(nums);
-            Sort sort = new Sort();
-            sort.MyQuickSort(nums);
-            Console.ReadKey();
+            LC训练计划_合并两个有序单链表.Solution tmp = new LC训练计划_合并两个有序单链表.Solution();
+            var tmp1 = tmp.TrainningPlan(new ListNode(1, new ListNode(2, new ListNode(4))),
+                new ListNode(1, new ListNode(3, new ListNode(4))));
         }
     }
 }

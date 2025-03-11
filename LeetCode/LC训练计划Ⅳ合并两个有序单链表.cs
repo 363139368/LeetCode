@@ -11,7 +11,7 @@
                 var l2C = l2;
                 while (true)
                 {
-                    if (l1C == null && l1C == null)
+                    if (l1C == null && l2C == null)
                     {
                         break;
                     }
