@@ -120,6 +120,7 @@
     <Compile Include="LCR004只出现一次的数字II.cs" />
     <Compile Include="LCR005最大单词长度乘积.cs" />
     <Compile Include="LCR006两数之和II输入有序数组.cs" />
+    <Compile Include="LC训练计划V找到两个单链表相同后缀的第一个节点.cs" />
     <Compile Include="LC训练计划Ⅱ单链表倒数第N个数.cs" />
     <Compile Include="LC训练计划Ⅳ合并两个有序单链表.cs" />
     <Compile Include="MyTree.cs" />
