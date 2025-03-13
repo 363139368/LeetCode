@@ -58,6 +58,7 @@
     <Compile Include="1480一维数组的动态和.cs" />
     <Compile Include="1486数组异或操作.cs" />
     <Compile Include="1512好数对的数目.cs" />
+    <Compile Include="151反转字符串中的单词.cs" />
     <Compile Include="167两数之和II_输入有序数组.cs" />
     <Compile Include="189轮转数组.cs" />
     <Compile Include="19删除链表的倒数第 N 个结点.cs" />
@@ -120,9 +121,10 @@
     <Compile Include="LCR004只出现一次的数字II.cs" />
     <Compile Include="LCR005最大单词长度乘积.cs" />
     <Compile Include="LCR006两数之和II输入有序数组.cs" />
-    <Compile Include="LC训练计划V找到两个单链表相同后缀的第一个节点.cs" />
-    <Compile Include="LC训练计划Ⅱ单链表倒数第N个数.cs" />
-    <Compile Include="LC训练计划Ⅳ合并两个有序单链表.cs" />
+    <Compile Include="LC数组训练1.cs" />
+    <Compile Include="LC数组训练计划V找到两个单链表相同后缀的第一个节点.cs" />
+    <Compile Include="LC数组训练计划Ⅱ单链表倒数第N个数.cs" />
+    <Compile Include="LC数组训练计划Ⅳ合并两个有序单链表.cs" />
     <Compile Include="MyTree.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

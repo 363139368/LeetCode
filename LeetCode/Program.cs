@@ -12,9 +12,8 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            LC训练计划_合并两个有序单链表.Solution tmp = new LC训练计划_合并两个有序单链表.Solution();
-            var tmp1 = tmp.TrainningPlan(new ListNode(1, new ListNode(2, new ListNode(4))),
-                new ListNode(1, new ListNode(3, new ListNode(4))));
+            _151反转字符串中的单词.Solution tmp = new _151反转字符串中的单词.Solution();
+            var tmp1 = tmp.ReverseWords("  hello world  ");
         }
     }
 }
