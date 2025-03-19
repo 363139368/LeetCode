@@ -12,9 +12,8 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            LC训练计划_合并两个有序单链表.Solution tmp = new LC训练计划_合并两个有序单链表.Solution();
-            var tmp1 = tmp.TrainningPlan(new ListNode(1, new ListNode(2, new ListNode(4))),
-                new ListNode(1, new ListNode(3, new ListNode(4))));
+            _8字符串转换整数atoi.Solution tmp = new _8字符串转换整数atoi.Solution();
+            var res = tmp.MyAtoi("42");
         }
     }
 }
