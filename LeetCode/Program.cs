@@ -12,8 +12,8 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            _8字符串转换整数atoi.Solution tmp = new _8字符串转换整数atoi.Solution();
-            var res = tmp.MyAtoi("42");
+            _151反转字符串中的单词.Solution tmp = new _151反转字符串中的单词.Solution();
+            var tmp1 = tmp.ReverseWords("  hello world  ");
         }
     }
 }
