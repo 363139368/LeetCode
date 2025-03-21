@@ -101,6 +101,7 @@
     <Compile Include="645错误的集合.cs" />
     <Compile Include="661图片平滑器.cs" />
     <Compile Include="665非递减数列.cs" />
+    <Compile Include="67二进制求和.cs" />
     <Compile Include="680验证回文字符串Ⅱ.cs" />
     <Compile Include="697数组的度.cs" />
     <Compile Include="69x的平方根.cs" />
