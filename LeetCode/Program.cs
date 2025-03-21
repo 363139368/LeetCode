@@ -12,28 +12,8 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            int[] nums = new int[30];
-            for (int i = 0; i < nums.Length; i++)
-            {
-                nums[i] = i + 1;
-            }
-
-            // 使用随机数对数组进行乱序
-            Random rand = new Random();
-            for (int i = nums.Length - 1; i > 0; i--)
-            {
-                int j = rand.Next(0, i + 1);
-                (nums[i], nums[j]) = (nums[j], nums[i]);
-            }
-
-            //Sort.Show(nums);
-            //Array.Sort(nums);
-            //Sort.Show(nums);
-
-            Sort.Show(nums);
-            Sort sort = new Sort();
-            sort.MyQuickSort(nums);
-            Console.ReadKey();
+            _151反转字符串中的单词.Solution tmp = new _151反转字符串中的单词.Solution();
+            var tmp1 = tmp.ReverseWords("  hello world  ");
         }
     }
 }
