@@ -10,55 +10,40 @@ namespace LeetCode
     {
         public int[] SearchRange(int[] nums, int target)
         {
-            Console.WriteLine(FindDown(nums, target));
-            return null;
-            var res = new int[] { -1, -1 };
-            int l = 0, r = nums.Length - 1;
-            while (nums[l] <= target && nums[r] >= target)
+            var first = -1;
+            var last = -1;
+            var l = 0;
+            var r = nums.Length - 1;
+            var m = (r - l) / 2 + l;
+            while (l <= r)
             {
-
-            }
-            return null;
-        }
-
-        private int FindDown(int[] nums, int target)
-        {
-            int l, r, m;
-            l = 0;
-            r = nums.Length - 1;
-            while (l < r)
-            {
-                m =  (r + l) / 2;
-                if (nums[m] >= target)
-                    r = m;
-                else 
+                var tmp = nums[m];
+                if (tmp > target)
+                {
+                    r = m - 1;
+                    m = (r - l) / 2 + l;
+                }
+                else if (tmp < target)
+                {
                     l = m + 1;
-            }
-
-            if (nums[l] == target)
-                return l;
-            else
-                return -1;
-        }
-
-        private int FindUp(int[] nums, int target, int left)
-        {
-            int l, r, m;
-            l = 0;
-            r = nums.Length - 1;
-            while (l < r)
-            {
-                m = (r + l) / 2;
-                if (nums[m] > target)
-                    l = m + 1;
+                    m = (r - l) / 2 + l;
+                }
                 else
-                    r = m;
+                {
+                    first = m;
+                    while (first - 1 >= 0 &&nums[first-1] == target)
+                    {
+                        first--;
+                    }
+                    last = m;
+                    while (last +1 <= nums.Length-1 && nums[last+1] == target)
+                    {
+                        last++;
+                    }
+                    break;
+                }
             }
-
-            if (nums[l] == target)
-                return l;
-            else
-                return -1;
+            return new int[] { first, last };
         }
     }
 }
