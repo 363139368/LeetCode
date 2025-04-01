@@ -47,6 +47,7 @@
     <Compile Include="0905StaticSingletonTest.cs" />
     <Compile Include="118杨辉三角.cs" />
     <Compile Include="119杨辉三角 II.cs" />
+    <Compile Include="11盛最多水的容器.cs" />
     <Compile Include="122买卖股票的最佳时机II.cs" />
     <Compile Include="128最长连续序列.cs" />
     <Compile Include="1330翻转子数组得到最大的数组值.cs" />
