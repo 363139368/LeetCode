@@ -65,8 +65,11 @@
     <Compile Include="19删除链表的倒数第 N 个结点.cs" />
     <Compile Include="203移除链表元素.cs" />
     <Compile Include="205同构字符串.cs" />
+    <Compile Include="225用队列实现栈.cs" />
+    <Compile Include="232用栈实现队列.cs" />
     <Compile Include="237删除链表中的节点.cs" />
     <Compile Include="238除自身以外数组的乘积.cs" />
+    <Compile Include="240搜索二维矩阵II.cs" />
     <Compile Include="283移动零.cs" />
     <Compile Include="289生命游戏.cs" />
     <Compile Include="290单词规律.cs" />

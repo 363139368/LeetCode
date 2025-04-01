@@ -12,8 +12,8 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            _151反转字符串中的单词.Solution tmp = new _151反转字符串中的单词.Solution();
-            var tmp1 = tmp.ReverseWords("  hello world  ");
+            _34在排序数组中查找元素的第一个和最后一个位置 tmp = new _34在排序数组中查找元素的第一个和最后一个位置();
+            tmp.SearchRange(new int[] { 1,1},1);
         }
     }
 }
