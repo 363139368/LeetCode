@@ -54,6 +54,7 @@
     <Compile Include="138随机链表的复制.cs" />
     <Compile Include="142环形链表II.cs" />
     <Compile Include="1431拥有最多糖果的孩子.cs" />
+    <Compile Include="1441用栈操作构建数组.cs" />
     <Compile Include="1470重新排列数组.cs" />
     <Compile Include="1480一维数组的动态和.cs" />
     <Compile Include="1486数组异或操作.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="189轮转数组.cs" />
     <Compile Include="191位1的个数.cs" />
     <Compile Include="19删除链表的倒数第 N 个结点.cs" />
+    <Compile Include="1两数之和.cs" />
     <Compile Include="203移除链表元素.cs" />
     <Compile Include="205同构字符串.cs" />
     <Compile Include="225用队列实现栈.cs" />
@@ -83,6 +85,7 @@
     <Compile Include="414第三大的数.cs" />
     <Compile Include="419棋盘上的战舰.cs" />
     <Compile Include="41缺失的第一个正数.cs" />
+    <Compile Include="42接雨水.cs" />
     <Compile Include="435无重叠区间.cs" />
     <Compile Include="442数组中重复的数据.cs" />
     <Compile Include="448找到所有数组中消失的数字.cs" />
@@ -93,6 +96,7 @@
     <Compile Include="48旋转图像.cs" />
     <Compile Include="495提莫攻击.cs" />
     <Compile Include="498对角线遍历.cs" />
+    <Compile Include="49字母异位词分组.cs" />
     <Compile Include="4寻找两个正序数组的中位数.cs" />
     <Compile Include="524通过删除字母匹配到字典里最长单词.cs" />
     <Compile Include="532数组中的k_diff数对.cs" />

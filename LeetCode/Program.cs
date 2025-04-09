@@ -12,8 +12,8 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            _34在排序数组中查找元素的第一个和最后一个位置 tmp = new _34在排序数组中查找元素的第一个和最后一个位置();
-            tmp.SearchRange(new int[] { 1,1},1);
+            _128最长连续序列.Solution tmp = new _128最长连续序列.Solution();
+            tmp.LongestConsecutive1(new[] { 1,0,1,2 });
         }
     }
 }

@@ -27,6 +27,31 @@ namespace LeetCode
                 }
                 return max;
             }
+
+
+            public int LongestConsecutive1(int[] nums)
+            {
+                if (nums == null || nums.Length == 0)
+                    return 0;
+                if (nums.Length == 1) return 1;
+                Array.Sort(nums);
+                var res = 1;
+                var tmp = 1;
+                for (int i = 0; i < nums.Length-1; i++)
+                {
+                    if(nums[i] == nums[i + 1])continue;
+                    if (nums[i] == nums[i + 1]-1)
+                    {
+                        tmp++;
+                        res = Math.Max(res, tmp);
+                    }
+                    else
+                    {
+                        tmp = 1;
+                    }
+                }
+                return res;
+            }
         }
     }
 }
