@@ -5,15 +5,12 @@
         public int[][] GenerateMatrix(int n)
         {
             var res = new int[n][];
-            for (int ii = 0; ii < n; ii++)
-            {
-                res[ii] = new int[n];
-            }
+            for (var ii = 0; ii < n; ii++) res[ii] = new int[n];
 
             var circle = 0;
             var eTarget = ETarget.eTarget_Right;
-            int i = 0;
-            int j = 0;
+            var i = 0;
+            var j = 0;
             var cur = 0;
             var count = n * n;
             while (cur < count)

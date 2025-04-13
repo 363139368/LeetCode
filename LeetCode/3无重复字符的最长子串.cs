@@ -1,68 +1,57 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace LeetCode
 {
     /// <summary>
-    /// 216ms
-    /// 25.5mb
+    ///     216ms
+    ///     25.5mb
     /// </summary>
     public class _3无重复字符的最长子串
     {
         public int LengthOfLongestSubstring_2024(string s)
         {
-            if(s.Length == 0) return 0;
-            int left = 0;
-            int right = 0;
-            int sum = 0;
-            Dictionary<char,int> map = new Dictionary<char,int>(128);
+            if (s.Length == 0) return 0;
+            var left = 0;
+            var right = 0;
+            var sum = 0;
+            var map = new Dictionary<char, int>(128);
             map[s[0]] = 1;
             sum++;
-            int res = 1;
+            var res = 1;
             while (true)
             {
-                if (right >= s.Length)
-                {
-                    break;
-                }
-                int nextRight = right + 1;
-                if (nextRight >= s.Length)
-                {
-                    break;
-                }
+                if (right >= s.Length) break;
+                var nextRight = right + 1;
+                if (nextRight >= s.Length) break;
                 if (map.ContainsKey(s[nextRight]))
                 {
                     map.Remove(s[left]);
                     left++;
                     sum--;
-                    continue;
                 }
                 else
                 {
                     map[s[nextRight]] = 1;
                     right = nextRight;
                     sum++;
-                    if (sum > res)
-                    {
-                        res = sum;
-                    }
+                    if (sum > res) res = sum;
                 }
             }
+
             return res;
         }
 
         public int LengthOfLongestSubstring_old(string s)
         {
-            int sum = 0;
-            HashSet<int> hash = new HashSet<int>();
-            for (int i = 0; i < s.Length; i++)
+            var sum = 0;
+            var hash = new HashSet<int>();
+            for (var i = 0; i < s.Length; i++)
             {
                 var cur = s[i];
                 if (!hash.Contains(cur))
+                {
                     hash.Add(cur);
+                }
                 else
                 {
                     sum = hash.Count > sum ? hash.Count : sum;
@@ -73,32 +62,34 @@ namespace LeetCode
                     }
                 }
             }
+
             sum = hash.Count > sum ? hash.Count : sum;
             return sum;
         }
+
         /// <summary>
-        /// 128ms
-        /// 24.9mb
+        ///     128ms
+        ///     24.9mb
         /// </summary>
         /// <param name="s"></param>
         /// <returns></returns>
         public int LengthOfLongestSubstring(string s)
         {
-            int sum = 0;
-            int start = 0;
-            int end = 0;
-            int temp16 = 0;
-            int temp32 = 0;
-            int temp48 = 0;
-            int temp64 = 0;
-            int temp80 = 0;
-            int temp96 = 0;
-            int temp112 = 0;
-            int temp128 = 0;
+            var sum = 0;
+            var start = 0;
+            var end = 0;
+            var temp16 = 0;
+            var temp32 = 0;
+            var temp48 = 0;
+            var temp64 = 0;
+            var temp80 = 0;
+            var temp96 = 0;
+            var temp112 = 0;
+            var temp128 = 0;
             while (start < s.Length && end < s.Length)
             {
                 int cur = s[end];
-                if(cur <= 16)
+                if (cur <= 16)
                 {
                     cur = 1 << cur;
                     if ((temp16 & cur) == cur)
@@ -307,6 +298,7 @@ namespace LeetCode
                     }
                 }
             }
+
             return sum;
         }
     }

@@ -3,9 +3,11 @@ using System.Collections.Generic;
 
 namespace LeetCode
 {
-    public class _49字母异位词分组 {
-        public class Solution {
-            private int[] char2V = new int[]
+    public class _49字母异位词分组
+    {
+        public class Solution
+        {
+            private int[] char2V =
             {
                 2, 3, 5,
                 7, 11, 13,
@@ -17,11 +19,11 @@ namespace LeetCode
                 79, 83, 89,
                 97, 101
             };
-            
-            public IList<IList<string>> GroupAnagrams(string[] strs) {
-                
-                Dictionary<string, List<string>> anagramGroups = new Dictionary<string, List<string>>();
-                for (int i = 0; i < strs.Length; i++)
+
+            public IList<IList<string>> GroupAnagrams(string[] strs)
+            {
+                var anagramGroups = new Dictionary<string, List<string>>();
+                for (var i = 0; i < strs.Length; i++)
                 {
                     var charArray = strs[i].ToCharArray();
                     Array.Sort(charArray);
@@ -32,15 +34,14 @@ namespace LeetCode
                     }
                     else
                     {
-                        List<string> group = new List<string>();
+                        var group = new List<string>();
                         group.Add(strs[i]);
                         anagramGroups[key] = group;
                     }
                 }
+
                 return new List<IList<string>>(anagramGroups.Values);
             }
-
-
         }
     }
 }

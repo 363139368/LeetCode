@@ -6,8 +6,8 @@
         {
             m--;
             n--;
-            int i = nums1.Length - 1;
-            bool b = true;
+            var i = nums1.Length - 1;
+            var b = true;
             while (m >= 0 || n >= 0)
             {
                 if (n < 0)
@@ -27,6 +27,7 @@
                     nums1[i] = nums2[n];
                     n--;
                 }
+
                 i--;
             }
         }

@@ -8,18 +8,15 @@ namespace LeetCode
         public IList<int> FindDuplicates(int[] nums)
         {
             var result = new List<int>();
-            for (int i = 0; i < nums.Length; i++)
+            for (var i = 0; i < nums.Length; i++)
             {
                 var cur = Math.Abs(nums[i]);
                 if (nums[cur - 1] > 0)
-                {
                     nums[cur - 1] *= -1;
-                }
                 else
-                {
                     result.Add(cur);
-                }
             }
+
             return result;
         }
     }

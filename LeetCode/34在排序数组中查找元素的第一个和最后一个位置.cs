@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LeetCode
+﻿namespace LeetCode
 {
     public class _34在排序数组中查找元素的第一个和最后一个位置
     {
@@ -31,19 +25,14 @@ namespace LeetCode
                 else
                 {
                     first = m;
-                    while (first - 1 >= 0 &&nums[first-1] == target)
-                    {
-                        first--;
-                    }
+                    while (first - 1 >= 0 && nums[first - 1] == target) first--;
                     last = m;
-                    while (last +1 <= nums.Length-1 && nums[last+1] == target)
-                    {
-                        last++;
-                    }
+                    while (last + 1 <= nums.Length - 1 && nums[last + 1] == target) last++;
                     break;
                 }
             }
-            return new int[] { first, last };
+
+            return new[] { first, last };
         }
     }
 }

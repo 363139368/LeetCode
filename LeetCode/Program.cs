@@ -1,19 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
-namespace LeetCode
+﻿namespace LeetCode
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            _128最长连续序列.Solution tmp = new _128最长连续序列.Solution();
-            tmp.LongestConsecutive1(new[] { 1,0,1,2 });
+            var tmp = new _15三数之和();
+            tmp.ThreeSum(new[] { -1,0,1,2,-1,-4 });
         }
     }
 }

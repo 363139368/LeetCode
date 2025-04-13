@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LeetCode
 {
@@ -13,12 +11,12 @@ namespace LeetCode
             var array = d.ToArray();
             Array.Sort(array, CompareByLen);
 
-            for (int i = 0; i < array.Length; i++)
+            for (var i = 0; i < array.Length; i++)
             {
                 var cur = array[i];
 
-                int sIndex = 0;
-                int aIndex = 0;
+                var sIndex = 0;
+                var aIndex = 0;
 
                 while (sIndex < s.Length && aIndex < cur.Length)
                 {
@@ -36,9 +34,9 @@ namespace LeetCode
                     }
                 }
             }
+
             return string.Empty;
         }
-
 
 
         private int CompareByLen(string cur, string next)

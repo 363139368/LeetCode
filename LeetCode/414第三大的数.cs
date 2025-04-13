@@ -1,5 +1,3 @@
-using System;
-
 namespace LeetCode
 {
     public class _414第三大的数
@@ -10,7 +8,7 @@ namespace LeetCode
             int? max2 = null;
             int? max3 = null;
 
-            for (int i = 0; i < nums.Length; i++)
+            for (var i = 0; i < nums.Length; i++)
             {
                 var num = nums[i];
                 if (max1 != null && num == max1) continue;

@@ -6,16 +6,13 @@
         {
             var h = mat.Length;
             var w = mat[0].Length;
-            if (r * c != h * w)
-            {
-                return mat;
-            }
+            if (r * c != h * w) return mat;
 
             var res = new int[r][];
-            for (int i = 0; i < r; i++)
+            for (var i = 0; i < r; i++)
             {
                 res[i] = new int[c];
-                for (int j = 0; j < c; j++)
+                for (var j = 0; j < c; j++)
                 {
                     var count = i * c + j + 1;
                     var oriI = (count - 1) / w;

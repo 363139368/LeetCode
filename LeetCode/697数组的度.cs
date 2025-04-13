@@ -4,24 +4,16 @@ namespace LeetCode
 {
     public class _697数组的度
     {
-        class Info
-        {
-            public int Value;
-            public int Count;
-            public int StartIndex;
-            public int EndIndex;
-        }
-
         public int FindShortestSubArray(int[] nums)
         {
             var count = 0;
             var len = 0;
-            Dictionary<int, Info> dict = new Dictionary<int, Info>();
-            for (int i = 0; i < nums.Length; i++)
+            var dict = new Dictionary<int, Info>();
+            for (var i = 0; i < nums.Length; i++)
             {
                 if (!dict.TryGetValue(nums[i], out var info))
                 {
-                    info = new Info() { Value = nums[i], Count = 1, StartIndex = i, EndIndex = i };
+                    info = new Info { Value = nums[i], Count = 1, StartIndex = i, EndIndex = i };
                     dict[nums[i]] = info;
                 }
                 else
@@ -41,7 +33,15 @@ namespace LeetCode
                 }
             }
 
-            return len+1;
+            return len + 1;
+        }
+
+        private class Info
+        {
+            public int Count;
+            public int EndIndex;
+            public int StartIndex;
+            public int Value;
         }
     }
 }

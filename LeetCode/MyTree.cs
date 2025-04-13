@@ -1,34 +1,29 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LeetCode
 {
-    class MyTree
+    internal class MyTree
     {
     }
 
 
     public class MyAvlTree
     {
-
     }
 
 
     public class AVLTreeNode<T> where T : IComparable
     {
-        public T Value { get; set; }
-        public AVLTreeNode<T> Left { get; set; }
-        public AVLTreeNode<T> Right { get; set; }
-        public int Height { get; set; }
-
         public AVLTreeNode(T value)
         {
             Value = value;
             Height = 1;
         }
+
+        public T Value { get; set; }
+        public AVLTreeNode<T> Left { get; set; }
+        public AVLTreeNode<T> Right { get; set; }
+        public int Height { get; set; }
     }
 
     public class AVLTree<T> where T : IComparable
@@ -44,8 +39,8 @@ namespace LeetCode
         // Right rotate
         private AVLTreeNode<T> RightRotate(AVLTreeNode<T> y)
         {
-            AVLTreeNode<T> x = y.Left;
-            AVLTreeNode<T> T2 = x.Right;
+            var x = y.Left;
+            var T2 = x.Right;
 
             x.Right = y;
             y.Left = T2;
@@ -59,8 +54,8 @@ namespace LeetCode
         // Left rotate
         private AVLTreeNode<T> LeftRotate(AVLTreeNode<T> x)
         {
-            AVLTreeNode<T> y = x.Right;
-            AVLTreeNode<T> T2 = y.Left;
+            var y = x.Right;
+            var T2 = y.Left;
 
             y.Left = x;
             x.Right = T2;
@@ -88,7 +83,7 @@ namespace LeetCode
             if (node == null)
                 return new AVLTreeNode<T>(value);
 
-            int compare = value.CompareTo(node.Value);
+            var compare = value.CompareTo(node.Value);
             if (compare < 0)
                 node.Left = Insert(node.Left, value);
             else if (compare > 0)
@@ -98,7 +93,7 @@ namespace LeetCode
 
             node.Height = 1 + Math.Max(Height(node.Left), Height(node.Right));
 
-            int balance = GetBalance(node);
+            var balance = GetBalance(node);
 
             // Left Left Case
             if (balance > 1 && value.CompareTo(node.Left.Value) < 0)
@@ -146,6 +141,7 @@ namespace LeetCode
                     Console.Write("L----");
                     indent += "|  ";
                 }
+
                 Console.WriteLine(node.Value);
                 Print(node.Left, indent, false);
                 Print(node.Right, indent, true);
@@ -162,4 +158,3 @@ namespace LeetCode
     //tree.Insert(25);
     //tree.Print();
 }
-

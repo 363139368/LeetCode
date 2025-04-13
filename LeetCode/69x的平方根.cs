@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LeetCode
+﻿namespace LeetCode
 {
     public class _69x的平方根
     {
@@ -13,8 +7,8 @@ namespace LeetCode
             if (x <= 1)
                 return x;
 
-            int min = 0;
-            int max = x;
+            var min = 0;
+            var max = x;
             int sq, mid;
             while (min <= max)
             {
@@ -23,15 +17,12 @@ namespace LeetCode
 
                 if (mid == sq)
                     return mid;
-                else if (sq > mid)
-                {
+                if (sq > mid)
                     min = mid + 1;
-                }
                 else
-                {
                     max = mid - 1;
-                }
             }
+
             return max;
         }
     }

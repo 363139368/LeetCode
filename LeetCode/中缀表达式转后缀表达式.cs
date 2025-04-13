@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LeetCode
 {
     public class 中缀表达式转后缀表达式
     {
-        Dictionary<char, int> m_ops = new Dictionary<char, int>()
+        private readonly Dictionary<char, int> m_ops = new Dictionary<char, int>
         {
             ['+'] = 1,
             ['-'] = 1,
             ['/'] = 2,
             ['*'] = 2,
             ['('] = 0,
-            [')'] = 3,
+            [')'] = 3
         };
-        Stack<char> m_st = new Stack<char>();
+
+        private readonly Stack<char> m_st = new Stack<char>();
 
         private void InsertOpt(char c)
         {
@@ -26,11 +24,13 @@ namespace LeetCode
                 m_st.Push(c);
                 return;
             }
+
             if (c == '(')
             {
                 m_st.Push(c);
                 return;
             }
+
             if (c == ')')
             {
                 var next = m_st.Pop();
@@ -40,33 +40,35 @@ namespace LeetCode
                 InsertOpt(c);
                 return;
             }
+
             if (m_ops[c] > m_ops[m_st.Peek()])
             {
                 m_st.Push(c);
                 return;
             }
+
             Console.Write(m_st.Pop());
             InsertOpt(c);
         }
+
         public void Translate(string str)
         {
             if (string.IsNullOrWhiteSpace(str))
                 return;
 
-            for (int i = 0; i < str.Length; i++)
+            for (var i = 0; i < str.Length; i++)
             {
-                char c = str[i];
+                var c = str[i];
                 if (!m_ops.ContainsKey(c))
                 {
                     Console.Write(c);
                     continue;
                 }
+
                 InsertOpt(c);
             }
-            while (m_st.Count > 0)
-            {
-                Console.Write(m_st.Pop());
-            }
+
+            while (m_st.Count > 0) Console.Write(m_st.Pop());
         }
     }
 }

@@ -4,9 +4,8 @@
     {
         public class MyHashMap
         {
-            public HashmapItem[] items;
-
             public int count;
+            public HashmapItem[] items;
 
             public MyHashMap()
             {
@@ -15,21 +14,17 @@
 
             public void Put(int key, int value)
             {
-                if ((float)count / (float)(items.Length) > 0.8f)
-                {
-                    rehash();
-                    // todo 扩容
-                }
-
+                if (count / (float)items.Length > 0.8f) rehash();
+                // todo 扩容
                 var index = key % GetCurFacter();
 
                 if (items[index] == null)
                 {
-                    items[index] = new HashmapItem()
+                    items[index] = new HashmapItem
                     {
                         key = key,
                         value = value,
-                        next = null,
+                        next = null
                     };
                     count++;
                     return;
@@ -43,11 +38,11 @@
 
                 if (items[index].next == null)
                 {
-                    items[index].next= new HashmapItem()
+                    items[index].next = new HashmapItem
                     {
                         key = key,
                         value = value,
-                        next = null,
+                        next = null
                     };
                     count++;
                     return;
@@ -71,16 +66,16 @@
                     }
                     else
                     {
-                        pre.next = new HashmapItem()
+                        pre.next = new HashmapItem
                         {
                             key = key,
                             value = value,
-                            next = null,
+                            next = null
                         };
                         count++;
                         return;
                     }
-                    
+
                     linkTimer++;
 
                     if (linkTimer >= 10)
@@ -96,39 +91,27 @@
             public int Get(int key)
             {
                 var index = key % GetCurFacter();
-                if (items[index] == null)
-                {
-                    return -1;
-                }
+                if (items[index] == null) return -1;
 
-                if (items[index].key == key)
-                {
-                    return items[index].value;
-                }
+                if (items[index].key == key) return items[index].value;
 
 
                 var pre = items[index];
                 var cur = items[index].next;
                 while (cur != null)
                 {
-                    if (cur.key == key)
-                    {
-                        return cur.value;
-                    }
+                    if (cur.key == key) return cur.value;
                     pre = cur;
                     cur = cur.next;
                 }
-                
+
                 return -1;
             }
 
             public void Remove(int key)
             {
                 var index = key % GetCurFacter();
-                if (items[index] == null)
-                {
-                    return;
-                }
+                if (items[index] == null) return;
 
                 if (items[index].key == key)
                 {
@@ -147,7 +130,7 @@
                             count--;
                             return;
                         }
-                        
+
                         pre = cur;
                         cur = cur.next;
                     }
@@ -156,14 +139,13 @@
 
             private void rehash()
             {
-                HashmapItem[] oldItems = items;
+                var oldItems = items;
                 items = new HashmapItem[oldItems.Length * 2];
-                for (int i = 0; i < oldItems.Length; i++)
-                {
+                for (var i = 0; i < oldItems.Length; i++)
                     if (oldItems[i] != null)
                     {
                         Put(oldItems[i].key, oldItems[i].value);
-                        
+
                         var cur = oldItems[i].next;
                         while (cur != null)
                         {
@@ -171,20 +153,19 @@
                             cur = cur.next;
                         }
                     }
-                }
             }
 
             private int GetCurFacter()
             {
-                return (items.Length / 2) + 1;
+                return items.Length / 2 + 1;
             }
         }
 
         public class HashmapItem
         {
             public int key;
+            public HashmapItem next;
             public int value;
-            public HashmapItem next = null;
         }
 
         // /**

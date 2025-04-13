@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace LeetCode
 {
@@ -9,17 +8,14 @@ namespace LeetCode
         eTarget_Left,
         eTarget_Right,
         eTarget_Up,
-        eTarget_Down,
+        eTarget_Down
     }
 
     public class _54螺旋矩阵
     {
         public IList<int> SpiralOrder(int[][] matrix)
         {
-            if (matrix == null || matrix.Length == 0)
-            {
-                return null;
-            }
+            if (matrix == null || matrix.Length == 0) return null;
 
 
             var high = matrix.Length;

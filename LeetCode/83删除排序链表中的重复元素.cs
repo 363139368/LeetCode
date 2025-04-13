@@ -10,7 +10,6 @@ namespace LeetCode
             var current = head.next;
             var curVal = head.val;
             while (current != null)
-            {
                 if (current.val == curVal)
                 {
                     pre.next = current.next;
@@ -22,7 +21,7 @@ namespace LeetCode
                     pre = current;
                     current = current.next;
                 }
-            }
+
             return head;
         }
     }

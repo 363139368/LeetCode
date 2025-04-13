@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LeetCode
 {
@@ -13,13 +9,13 @@ namespace LeetCode
             if (k == 0)
                 return 0;
 
-            int[] ks = new int[256];
+            var ks = new int[256];
 
-            int left = 0;
-            int right = 0;
-            int res = 0;
-            int tempRes = 0;
-            int tempK = 0;
+            var left = 0;
+            var right = 0;
+            var res = 0;
+            var tempRes = 0;
+            var tempK = 0;
             while (left < s.Length)
             {
                 if (right >= s.Length)
@@ -60,7 +56,6 @@ namespace LeetCode
                         left++;
                         right = left;
                         ks = new int[256];
-
                     }
                 }
             }

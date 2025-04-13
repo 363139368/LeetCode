@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LeetCode
+﻿namespace LeetCode
 {
     public class _122买卖股票的最佳时机II
     {
         public int MaxProfit(int[] prices)
         {
-            int res = 0;
+            var res = 0;
             if (prices.Length <= 1)
                 return res;
-            int inPrice = prices[0];
-            int outPrice = 0;
-            int i = 0;
+            var inPrice = prices[0];
+            var outPrice = 0;
+            var i = 0;
             while (i < prices.Length)
             {
                 var cur = prices[i];
@@ -23,7 +17,7 @@ namespace LeetCode
                     outPrice = cur;
                 if (cur < outPrice)
                 {
-                    res += (outPrice - inPrice);
+                    res += outPrice - inPrice;
                     inPrice = cur;
                     outPrice = 0;
                     i++;
@@ -41,7 +35,7 @@ namespace LeetCode
             }
 
             if (outPrice > inPrice)
-                res += (outPrice - inPrice);
+                res += outPrice - inPrice;
 
             return res;
         }

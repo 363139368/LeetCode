@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LeetCode
 {
@@ -12,15 +8,12 @@ namespace LeetCode
         {
             var nextVal = GetNextVal(t);
 
-            int i = 0;    //s
-            int j = 0;    //t
+            var i = 0; //s
+            var j = 0; //t
 
             while (i < s.Length || j < t.Length)
             {
-                if (i >= s.Length)
-                {
-                    return;
-                }
+                if (i >= s.Length) return;
 
                 if (j >= t.Length)
                 {
@@ -47,16 +40,15 @@ namespace LeetCode
                 }
             }
         }
-        
+
         public int[] GetNextVal(char[] t)
         {
             var res = new int[t.Length];
             res[0] = -1;
             res[1] = 0;
-            int len = 0;
-            int i = 1;
+            var len = 0;
+            var i = 1;
             while (i < t.Length - 1)
-            {
                 if (t[i] == t[len])
                 {
                     len++;
@@ -69,8 +61,10 @@ namespace LeetCode
                     i++;
                 }
                 else
+                {
                     len--;
-            }
+                }
+
             return res;
         }
     }

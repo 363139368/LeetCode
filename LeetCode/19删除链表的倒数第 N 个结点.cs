@@ -6,18 +6,19 @@ namespace LeetCode
     {
         public ListNode RemoveNthFromEnd(ListNode head, int n)
         {
-            Queue<ListNode> q = new Queue<ListNode>(n + 1);
-            ListNode cur = head;
-            int listCount = 0;
+            var q = new Queue<ListNode>(n + 1);
+            var cur = head;
+            var listCount = 0;
             while (cur != null)
             {
-                if(q.Count == n +1)
+                if (q.Count == n + 1)
                     q.Dequeue();
                 q.Enqueue(cur);
                 cur = cur.next;
                 listCount++;
             }
-            if(listCount == n)
+
+            if (listCount == n)
                 return head.next;
             if (q.Count == 0)
                 return null;
@@ -30,7 +31,7 @@ namespace LeetCode
             if (tar == null)
                 return null;
             tarPre.next = tar.next;
-            if(tar == head)
+            if (tar == head)
                 return head.next;
             return head;
         }

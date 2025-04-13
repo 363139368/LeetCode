@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LeetCode
 {
@@ -13,11 +10,47 @@ namespace LeetCode
             IList<IList<int>> res = new List<IList<int>>();
             if (nums.Length < 3)
                 return null;
-            Dictionary<int, int> dic = new Dictionary<int, int>();
-            for (int i = 0; i < nums.Length; i++)
-            {
 
+            Array.Sort(nums);
+
+            for (var i = 0; i < nums.Length - 2; i++)
+            {
+                var temp = nums[i];
+                if (i > 0 && nums[i] == nums[i - 1])
+                {
+                    continue;
+                }
+                var j = i + 1;
+                var k = nums.Length - 1;
+                while (j < k)
+                {
+                    if (j != i+1 && nums[j] == nums[j - 1])
+                    {
+                        j++;
+                        continue;
+                    }
+                    if (k != nums.Length - 1 && nums[k] == nums[k + 1])
+                    {
+                        k--;
+                        continue;
+                    }
+                    if (temp + nums[j] + nums[k] == 0)
+                    {
+                        res.Add(new List<int> { temp, nums[j], nums[k] });
+                        j++;
+                        k--;
+                    }
+                    else if (temp + nums[j] + nums[k] < 0)
+                    {
+                        j++;
+                    }
+                    else
+                    {
+                        k--;
+                    }
+                }
             }
+
             return res;
         }
     }

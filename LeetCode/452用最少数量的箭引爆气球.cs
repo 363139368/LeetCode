@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LeetCode
 {
@@ -12,6 +8,7 @@ namespace LeetCode
         {
             return a1[1].CompareTo(a2[1]);
         }
+
         public int FindMinArrowShots(int[][] points)
         {
             if (points.Length == 0)
@@ -19,9 +16,9 @@ namespace LeetCode
             if (points.Length == 1)
                 return 1;
             Array.Sort(points, Compare);
-            int res = 1;
-            int lastX = points[0][1];
-            for (int i = 1; i < points.Length; i++)
+            var res = 1;
+            var lastX = points[0][1];
+            for (var i = 1; i < points.Length; i++)
             {
                 var cur = points[i];
                 if (lastX >= cur[0] && lastX <= cur[1])
@@ -29,6 +26,7 @@ namespace LeetCode
                 res++;
                 lastX = cur[1];
             }
+
             return res;
         }
     }

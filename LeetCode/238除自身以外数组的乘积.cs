@@ -6,13 +6,10 @@
         {
             var result = new int[nums.Length];
             result[0] = 1;
-            for (int i = 1; i < nums.Length; i++)
-            {
-                result[i] = nums[i - 1] * result[i - 1];
-            }
+            for (var i = 1; i < nums.Length; i++) result[i] = nums[i - 1] * result[i - 1];
 
             var tmp = 1;
-            for (int i = nums.Length - 2; i >= 0; i--)
+            for (var i = nums.Length - 2; i >= 0; i--)
             {
                 tmp *= nums[i + 1];
                 result[i] *= tmp;

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace LeetCode
 {
@@ -10,8 +6,8 @@ namespace LeetCode
     {
         public int FindRepeatNumber(int[] nums)
         {
-            HashSet<int> hs = new HashSet<int>();
-            for (int i = 0; i < nums.Length; i++)
+            var hs = new HashSet<int>();
+            for (var i = 0; i < nums.Length; i++)
             {
                 if (hs.Contains(nums[i]))
                     return nums[i];

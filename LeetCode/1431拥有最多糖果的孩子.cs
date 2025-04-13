@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace LeetCode
 {
@@ -11,16 +7,11 @@ namespace LeetCode
         public IList<bool> KidsWithCandies(int[] candies, int extraCandies)
         {
             IList<bool> res = new List<bool>(candies.Length);
-            int max = 0;
-            for (int i = 0; i < candies.Length; i++)
-            {
+            var max = 0;
+            for (var i = 0; i < candies.Length; i++)
                 if (candies[i] > max)
                     max = candies[i];
-            }
-            for (int i = 0; i < candies.Length; i++)
-            {
-                res.Add(candies[i] + extraCandies >= max);
-            }
+            for (var i = 0; i < candies.Length; i++) res.Add(candies[i] + extraCandies >= max);
             return res;
         }
     }

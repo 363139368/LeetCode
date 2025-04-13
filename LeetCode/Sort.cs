@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
 
 namespace LeetCode
 {
@@ -11,14 +6,12 @@ namespace LeetCode
     {
         public static void Show(int[] array)
         {
-            string str = String.Empty;
-            for (int i = 0; i < array.Length; i++)
-            {
-                str += $"{i}:{array[i]} ";
-            }
+            var str = string.Empty;
+            for (var i = 0; i < array.Length; i++) str += $"{i}:{array[i]} ";
 
             Console.WriteLine(str);
         }
+
         public static void Swap(int[] array, int a, int b)
         {
             Console.WriteLine($"swap index:{a} value:{array[a]} index:{b} value:{array[b]}");
@@ -26,17 +19,16 @@ namespace LeetCode
             (array[a], array[b]) = (array[b], array[a]);
             Show(array);
         }
+
         //选择排序
         public int[] SelectSort(int[] array)
         {
-            for (int i = 0; i < array.Length; i++)
+            for (var i = 0; i < array.Length; i++)
             {
-                int min = i;
-                for (int ii = i + 1; ii < array.Length; ii++)
-                {
+                var min = i;
+                for (var ii = i + 1; ii < array.Length; ii++)
                     if (array[ii] < array[min])
                         min = ii;
-                }
 
                 Swap(array, min, i);
             }
@@ -47,41 +39,37 @@ namespace LeetCode
         //插入排序
         public int[] InsertSort(int[] array)
         {
-            for (int i = 0; i < array.Length; i++)
-            {
-                for (int ii = i; ii > 0 && array[ii] < array[ii - 1]; ii--)
-                {
-                    Swap(array, ii, ii - 1);
-                }
-            }
+            for (var i = 0; i < array.Length; i++)
+            for (var ii = i; ii > 0 && array[ii] < array[ii - 1]; ii--)
+                Swap(array, ii, ii - 1);
+
             return array;
         }
 
         //希尔排序
         public int[] ShellSort(int[] array)
         {
-            int len = array.Length;
-            int gap = 1;
+            var len = array.Length;
+            var gap = 1;
             while (gap < len / 3)
                 gap = gap * 3 + 1;
             while (gap >= 1)
             {
-                for (int i = gap; i < len; i++)
-                {
-                    for (int j = i; j >= gap && array[j] < array[j - gap]; j -= gap)
-                    {
-                        Swap(array, j, j - gap);
-                    }
-                }
+                for (var i = gap; i < len; i++)
+                for (var j = i; j >= gap && array[j] < array[j - gap]; j -= gap)
+                    Swap(array, j, j - gap);
+
                 gap /= 3;
             }
+
             return array;
         }
 
         #region 归并排序
+
         public void MergeSort(int[] array)
         {
-            int[] temp = new int[array.Length];
+            var temp = new int[array.Length];
             MSort(array, 0, array.Length - 1, temp);
         }
 
@@ -89,7 +77,7 @@ namespace LeetCode
         {
             if (left >= right)
                 return;
-            int mid = left + (right - left) / 2;
+            var mid = left + (right - left) / 2;
             MSort(array, left, mid, temp);
             MSort(array, mid + 1, right, temp);
             Merge(array, left, mid, right, temp);
@@ -97,16 +85,14 @@ namespace LeetCode
 
         private void Merge(int[] array, int left, int mid, int right, int[] temp)
         {
-            int i = left;
-            int j = mid + 1;
-            int t = 0;
+            var i = left;
+            var j = mid + 1;
+            var t = 0;
             while (i <= mid && j <= right)
-            {
                 if (array[i] < array[j])
                     temp[t++] = array[i++];
                 else
                     temp[t++] = array[j++];
-            }
 
             while (i <= mid)
                 temp[t++] = array[i++];
@@ -119,6 +105,7 @@ namespace LeetCode
             while (left <= right)
                 array[left++] = temp[t++];
         }
+
         #endregion
 
         #region 堆排序
@@ -132,31 +119,25 @@ namespace LeetCode
             {
                 Swap(array, 0, len);
                 len--;
-                int i = 0;
-                while (i <= len / 2 - 1)
-                {
-                    i = Heapify(array, i, len);
-                }
+                var i = 0;
+                while (i <= len / 2 - 1) i = Heapify(array, i, len);
             }
         }
 
         private void BuildHeap(int[] array)
         {
-            for (int i = array.Length / 2 - 1; i >= 0; i--)
-            {
-                Heapify(array, i, array.Length);
-            }
+            for (var i = array.Length / 2 - 1; i >= 0; i--) Heapify(array, i, array.Length);
         }
 
         private int Heapify(int[] array, int index, int len)
         {
-            int leftChild = index * 2 + 1;
-            int rightChild = leftChild + 1;
-            bool isHaveLeft = leftChild < len;
-            bool isHaveRight = rightChild < len;
+            var leftChild = index * 2 + 1;
+            var rightChild = leftChild + 1;
+            var isHaveLeft = leftChild < len;
+            var isHaveRight = rightChild < len;
             if (!(isHaveRight || isHaveLeft))
                 return -1;
-            int temp = leftChild;
+            var temp = leftChild;
             if (isHaveRight && isHaveLeft && array[leftChild] < array[rightChild])
                 temp = rightChild;
             if (array[index] < array[temp])
@@ -166,12 +147,9 @@ namespace LeetCode
 
         public void HeapSort(int[] array)
         {
-            for (int i = array.Length / 2 - 1; i >= 0; i--)
-            {
-                AdjustHeap(array, i, array.Length);
-            }
+            for (var i = array.Length / 2 - 1; i >= 0; i--) AdjustHeap(array, i, array.Length);
 
-            for (int i = array.Length - 1; i > 0; i--)
+            for (var i = array.Length - 1; i > 0; i--)
             {
                 var temp = array[i];
                 array[i] = array[0];
@@ -183,7 +161,7 @@ namespace LeetCode
         private void AdjustHeap(int[] array, int i, int len)
         {
             var temp = array[i];
-            for (int k = i * 2 + 1; k < len; k = k * 2 + 1)
+            for (var k = i * 2 + 1; k < len; k = k * 2 + 1)
             {
                 if (k + 1 < len && array[k] < array[k + 1])
                     k++;
@@ -200,6 +178,7 @@ namespace LeetCode
 
             array[i] = temp;
         }
+
         #endregion
 
         #region 快排
@@ -208,7 +187,7 @@ namespace LeetCode
         //{
         //    if (left >= right)
         //        return;
-        
+
         //    int i = left;
         //    int j = right;
         //    int mid = nums[(left + right) / 2];
@@ -220,7 +199,7 @@ namespace LeetCode
         //            j--;
         //        if (i == j)
         //            break;
-        
+
         //        Swap(nums, i, j);
         //    }
         //    MyQuickSort2(nums, left, i);
@@ -236,8 +215,8 @@ namespace LeetCode
         public void QuickSort(int[] nums, int left, int right)
         {
             if (left >= right) return;
-            
-            int point = Partition(nums, left, right);
+
+            var point = Partition(nums, left, right);
 
             QuickSort(nums, left, point - 1);
             QuickSort(nums, point + 1, right);
@@ -245,9 +224,8 @@ namespace LeetCode
 
         public int Partition(int[] nums, int left, int right)
         {
-
-            int i = left;
-            int j = right;
+            var i = left;
+            var j = right;
             Console.WriteLine($"[Partition] point:{nums[left]}");
 
             while (i < j)
@@ -256,12 +234,14 @@ namespace LeetCode
                 while (i < j && nums[i] <= nums[left]) i++;
                 Swap(nums, i, j);
             }
+
             Swap(nums, left, i);
 
             Console.WriteLine($"[Partition] point:{i}");
 
             return i;
         }
+
         #endregion
     }
 }

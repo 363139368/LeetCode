@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LeetCode
+﻿namespace LeetCode
 {
     public class ListNode
     {
-        public int val;
-        public ListNode next;
-        
         public int HashValue;
+        public ListNode next;
+        public int val;
+
         public ListNode(int x)
         {
             val = x;
@@ -29,7 +23,6 @@ namespace LeetCode
 
     public class _142环形链表II
     {
-
         public ListNode DetectCycle(ListNode head)
         {
             var slow = head;
@@ -42,12 +35,14 @@ namespace LeetCode
                 fast = fast.next.next;
                 slow = slow.next;
             } while (slow != fast);
+
             fast = head;
             while (fast != slow)
             {
                 fast = fast.next;
                 slow = slow.next;
             }
+
             return fast;
         }
     }

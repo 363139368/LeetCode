@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LeetCode
+﻿namespace LeetCode
 {
     public class 剑指_Offer24反转链表
     {
@@ -14,7 +8,7 @@ namespace LeetCode
         {
             if (head == null)
                 return null;
-            ListNode cur = head;
+            var cur = head;
             ListNode pre = null;
             ListNode next = null;
 

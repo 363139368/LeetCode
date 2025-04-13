@@ -1,153 +1,154 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
-  <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{619D5234-D9BB-4AAF-A3F0-4C6D8F3CD843}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>LeetCode</RootNamespace>
-    <AssemblyName>LeetCode</AssemblyName>
-    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System.Xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="0905StaticSingletonTest.cs" />
-    <Compile Include="118杨辉三角.cs" />
-    <Compile Include="119杨辉三角 II.cs" />
-    <Compile Include="11盛最多水的容器.cs" />
-    <Compile Include="122买卖股票的最佳时机II.cs" />
-    <Compile Include="128最长连续序列.cs" />
-    <Compile Include="1330翻转子数组得到最大的数组值.cs" />
-    <Compile Include="135分发糖果.cs" />
-    <Compile Include="138随机链表的复制.cs" />
-    <Compile Include="142环形链表II.cs" />
-    <Compile Include="1431拥有最多糖果的孩子.cs" />
-    <Compile Include="1441用栈操作构建数组.cs" />
-    <Compile Include="1470重新排列数组.cs" />
-    <Compile Include="1480一维数组的动态和.cs" />
-    <Compile Include="1486数组异或操作.cs" />
-    <Compile Include="1512好数对的数目.cs" />
-    <Compile Include="151反转字符串中的单词.cs" />
-    <Compile Include="167两数之和II_输入有序数组.cs" />
-    <Compile Include="189轮转数组.cs" />
-    <Compile Include="191位1的个数.cs" />
-    <Compile Include="19删除链表的倒数第 N 个结点.cs" />
-    <Compile Include="1两数之和.cs" />
-    <Compile Include="203移除链表元素.cs" />
-    <Compile Include="205同构字符串.cs" />
-    <Compile Include="225用队列实现栈.cs" />
-    <Compile Include="232用栈实现队列.cs" />
-    <Compile Include="237删除链表中的节点.cs" />
-    <Compile Include="238除自身以外数组的乘积.cs" />
-    <Compile Include="240搜索二维矩阵II.cs" />
-    <Compile Include="283移动零.cs" />
-    <Compile Include="289生命游戏.cs" />
-    <Compile Include="290单词规律.cs" />
-    <Compile Include="303区域和检索数组不可变.cs" />
-    <Compile Include="340至多包含 K 个不同字符的最长子串.cs" />
-    <Compile Include="349两个数组的交集.cs" />
-    <Compile Include="34在排序数组中查找元素的第一个和最后一个位置.cs" />
-    <Compile Include="396旋转函数.cs" />
-    <Compile Include="3无重复字符的最长子串.cs" />
-    <Compile Include="406根据身高重建队列.cs" />
-    <Compile Include="414第三大的数.cs" />
-    <Compile Include="419棋盘上的战舰.cs" />
-    <Compile Include="41缺失的第一个正数.cs" />
-    <Compile Include="42接雨水.cs" />
-    <Compile Include="435无重叠区间.cs" />
-    <Compile Include="442数组中重复的数据.cs" />
-    <Compile Include="448找到所有数组中消失的数字.cs" />
-    <Compile Include="453最小操作次数使数组元素相等.cs" />
-    <Compile Include="452用最少数量的箭引爆气球.cs" />
-    <Compile Include="455分发饼干.cs" />
-    <Compile Include="485最大连续 1 的个数.cs" />
-    <Compile Include="48旋转图像.cs" />
-    <Compile Include="495提莫攻击.cs" />
-    <Compile Include="498对角线遍历.cs" />
-    <Compile Include="49字母异位词分组.cs" />
-    <Compile Include="4寻找两个正序数组的中位数.cs" />
-    <Compile Include="524通过删除字母匹配到字典里最长单词.cs" />
-    <Compile Include="532数组中的k_diff数对.cs" />
-    <Compile Include="54螺旋矩阵.cs" />
-    <Compile Include="566重塑矩阵.cs" />
-    <Compile Include="598区间加法 II.cs" />
-    <Compile Include="59螺旋矩阵II.cs" />
-    <Compile Include="605种花问题.cs" />
-    <Compile Include="628三个数的最大乘积.cs" />
-    <Compile Include="633平方数之和.cs" />
-    <Compile Include="645错误的集合.cs" />
-    <Compile Include="661图片平滑器.cs" />
-    <Compile Include="665非递减数列.cs" />
-    <Compile Include="67二进制求和.cs" />
-    <Compile Include="680验证回文字符串Ⅱ.cs" />
-    <Compile Include="697数组的度.cs" />
-    <Compile Include="69x的平方根.cs" />
-    <Compile Include="706设计哈希映射.cs" />
-    <Compile Include="707设计链表.cs" />
-    <Compile Include="73矩阵置零.cs" />
-    <Compile Include="763划分字母区间.cs" />
-    <Compile Include="76最小覆盖子串.cs" />
-    <Compile Include="82删除排序链表中的重复元素II.cs" />
-    <Compile Include="83删除排序链表中的重复元素.cs" />
-    <Compile Include="88合并两个有序数组.cs" />
-    <Compile Include="8字符串转换整数atoi.cs" />
-    <Compile Include="BitCalculator.cs" />
-    <Compile Include="KMP.cs" />
-    <Compile Include="LCR_001_两数相除.cs" />
-    <Compile Include="LCR_002_二进制求和.cs" />
-    <Compile Include="LCR_003_比特位计数.cs" />
-    <Compile Include="LCR004只出现一次的数字II.cs" />
-    <Compile Include="LCR005最大单词长度乘积.cs" />
-    <Compile Include="LCR006两数之和II输入有序数组.cs" />
-    <Compile Include="LC数组训练1.cs" />
-    <Compile Include="LC数组训练计划V找到两个单链表相同后缀的第一个节点.cs" />
-    <Compile Include="LC数组训练计划Ⅱ单链表倒数第N个数.cs" />
-    <Compile Include="LC数组训练计划Ⅳ合并两个有序单链表.cs" />
-    <Compile Include="MyTree.cs" />
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sort.cs" />
-    <Compile Include="StringHashCode.cs" />
-    <Compile Include="中缀表达式转后缀表达式.cs" />
-    <Compile Include="删除链表节点.cs" />
-    <Compile Include="剑指 Offer03数组中重复的数字.cs" />
-    <Compile Include="剑指 Offer24反转链表.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+    <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')"/>
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+        <ProjectGuid>{619D5234-D9BB-4AAF-A3F0-4C6D8F3CD843}</ProjectGuid>
+        <OutputType>Exe</OutputType>
+        <RootNamespace>LeetCode</RootNamespace>
+        <AssemblyName>LeetCode</AssemblyName>
+        <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+        <FileAlignment>512</FileAlignment>
+        <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+        <Deterministic>true</Deterministic>
+        <TargetFrameworkProfile/>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugSymbols>true</DebugSymbols>
+        <DebugType>full</DebugType>
+        <Optimize>false</Optimize>
+        <OutputPath>bin\Debug\</OutputPath>
+        <DefineConstants>DEBUG;TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+        <PlatformTarget>AnyCPU</PlatformTarget>
+        <DebugType>pdbonly</DebugType>
+        <Optimize>true</Optimize>
+        <OutputPath>bin\Release\</OutputPath>
+        <DefineConstants>TRACE</DefineConstants>
+        <ErrorReport>prompt</ErrorReport>
+        <WarningLevel>4</WarningLevel>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="System"/>
+        <Reference Include="System.Core"/>
+        <Reference Include="System.Xml.Linq"/>
+        <Reference Include="System.Data.DataSetExtensions"/>
+        <Reference Include="Microsoft.CSharp"/>
+        <Reference Include="System.Data"/>
+        <Reference Include="System.Net.Http"/>
+        <Reference Include="System.Xml"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Include="0905StaticSingletonTest.cs"/>
+        <Compile Include="118杨辉三角.cs"/>
+        <Compile Include="119杨辉三角 II.cs"/>
+        <Compile Include="11盛最多水的容器.cs"/>
+        <Compile Include="122买卖股票的最佳时机II.cs"/>
+        <Compile Include="128最长连续序列.cs"/>
+        <Compile Include="1330翻转子数组得到最大的数组值.cs"/>
+        <Compile Include="135分发糖果.cs"/>
+        <Compile Include="138随机链表的复制.cs"/>
+        <Compile Include="142环形链表II.cs"/>
+        <Compile Include="1431拥有最多糖果的孩子.cs"/>
+        <Compile Include="1441用栈操作构建数组.cs"/>
+        <Compile Include="1470重新排列数组.cs"/>
+        <Compile Include="1480一维数组的动态和.cs"/>
+        <Compile Include="1486数组异或操作.cs"/>
+        <Compile Include="1512好数对的数目.cs"/>
+        <Compile Include="151反转字符串中的单词.cs"/>
+        <Compile Include="15三数之和.cs"/>
+        <Compile Include="167两数之和II_输入有序数组.cs"/>
+        <Compile Include="189轮转数组.cs"/>
+        <Compile Include="191位1的个数.cs"/>
+        <Compile Include="19删除链表的倒数第 N 个结点.cs"/>
+        <Compile Include="1两数之和.cs"/>
+        <Compile Include="203移除链表元素.cs"/>
+        <Compile Include="205同构字符串.cs"/>
+        <Compile Include="225用队列实现栈.cs"/>
+        <Compile Include="232用栈实现队列.cs"/>
+        <Compile Include="237删除链表中的节点.cs"/>
+        <Compile Include="238除自身以外数组的乘积.cs"/>
+        <Compile Include="240搜索二维矩阵II.cs"/>
+        <Compile Include="283移动零.cs"/>
+        <Compile Include="289生命游戏.cs"/>
+        <Compile Include="290单词规律.cs"/>
+        <Compile Include="303区域和检索数组不可变.cs"/>
+        <Compile Include="340至多包含 K 个不同字符的最长子串.cs"/>
+        <Compile Include="349两个数组的交集.cs"/>
+        <Compile Include="34在排序数组中查找元素的第一个和最后一个位置.cs"/>
+        <Compile Include="396旋转函数.cs"/>
+        <Compile Include="3无重复字符的最长子串.cs"/>
+        <Compile Include="406根据身高重建队列.cs"/>
+        <Compile Include="414第三大的数.cs"/>
+        <Compile Include="419棋盘上的战舰.cs"/>
+        <Compile Include="41缺失的第一个正数.cs"/>
+        <Compile Include="42接雨水.cs"/>
+        <Compile Include="435无重叠区间.cs"/>
+        <Compile Include="442数组中重复的数据.cs"/>
+        <Compile Include="448找到所有数组中消失的数字.cs"/>
+        <Compile Include="453最小操作次数使数组元素相等.cs"/>
+        <Compile Include="452用最少数量的箭引爆气球.cs"/>
+        <Compile Include="455分发饼干.cs"/>
+        <Compile Include="485最大连续 1 的个数.cs"/>
+        <Compile Include="48旋转图像.cs"/>
+        <Compile Include="495提莫攻击.cs"/>
+        <Compile Include="498对角线遍历.cs"/>
+        <Compile Include="49字母异位词分组.cs"/>
+        <Compile Include="4寻找两个正序数组的中位数.cs"/>
+        <Compile Include="524通过删除字母匹配到字典里最长单词.cs"/>
+        <Compile Include="532数组中的k_diff数对.cs"/>
+        <Compile Include="54螺旋矩阵.cs"/>
+        <Compile Include="566重塑矩阵.cs"/>
+        <Compile Include="598区间加法 II.cs"/>
+        <Compile Include="59螺旋矩阵II.cs"/>
+        <Compile Include="605种花问题.cs"/>
+        <Compile Include="628三个数的最大乘积.cs"/>
+        <Compile Include="633平方数之和.cs"/>
+        <Compile Include="645错误的集合.cs"/>
+        <Compile Include="661图片平滑器.cs"/>
+        <Compile Include="665非递减数列.cs"/>
+        <Compile Include="67二进制求和.cs"/>
+        <Compile Include="680验证回文字符串Ⅱ.cs"/>
+        <Compile Include="697数组的度.cs"/>
+        <Compile Include="69x的平方根.cs"/>
+        <Compile Include="706设计哈希映射.cs"/>
+        <Compile Include="707设计链表.cs"/>
+        <Compile Include="73矩阵置零.cs"/>
+        <Compile Include="763划分字母区间.cs"/>
+        <Compile Include="76最小覆盖子串.cs"/>
+        <Compile Include="82删除排序链表中的重复元素II.cs"/>
+        <Compile Include="83删除排序链表中的重复元素.cs"/>
+        <Compile Include="88合并两个有序数组.cs"/>
+        <Compile Include="8字符串转换整数atoi.cs"/>
+        <Compile Include="BitCalculator.cs"/>
+        <Compile Include="KMP.cs"/>
+        <Compile Include="LCR_001_两数相除.cs"/>
+        <Compile Include="LCR_002_二进制求和.cs"/>
+        <Compile Include="LCR_003_比特位计数.cs"/>
+        <Compile Include="LCR004只出现一次的数字II.cs"/>
+        <Compile Include="LCR005最大单词长度乘积.cs"/>
+        <Compile Include="LCR006两数之和II输入有序数组.cs"/>
+        <Compile Include="LC数组训练1.cs"/>
+        <Compile Include="LC数组训练计划V找到两个单链表相同后缀的第一个节点.cs"/>
+        <Compile Include="LC数组训练计划Ⅱ单链表倒数第N个数.cs"/>
+        <Compile Include="LC数组训练计划Ⅳ合并两个有序单链表.cs"/>
+        <Compile Include="MyTree.cs"/>
+        <Compile Include="Program.cs"/>
+        <Compile Include="Properties\AssemblyInfo.cs"/>
+        <Compile Include="Sort.cs"/>
+        <Compile Include="StringHashCode.cs"/>
+        <Compile Include="中缀表达式转后缀表达式.cs"/>
+        <Compile Include="删除链表节点.cs"/>
+        <Compile Include="剑指 Offer03数组中重复的数字.cs"/>
+        <Compile Include="剑指 Offer24反转链表.cs"/>
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="App.config"/>
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
 </Project>

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace LeetCode
 {
@@ -8,15 +7,9 @@ namespace LeetCode
         public int MinMoves(int[] nums)
         {
             var min = int.MaxValue;
-            for (int i = 0; i < nums.Length; i++)
-            {
-                min = Math.Min(min, nums[i]);
-            }
+            for (var i = 0; i < nums.Length; i++) min = Math.Min(min, nums[i]);
             var res = 0;
-            for (int i = nums.Length - 1; i >= 0; i--)
-            {
-                res += (nums[i] - min);
-            }
+            for (var i = nums.Length - 1; i >= 0; i--) res += nums[i] - min;
             return res;
         }
     }

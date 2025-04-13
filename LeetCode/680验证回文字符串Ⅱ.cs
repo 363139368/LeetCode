@@ -1,19 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LeetCode
+﻿namespace LeetCode
 {
     public class _680验证回文字符串Ⅱ
     {
         public bool ValidPalindrome(string s)
         {
-            int l = 0;
-            int r = s.Length - 1;
+            var l = 0;
+            var r = s.Length - 1;
 
-            int errorCount = 0;
+            var errorCount = 0;
 
             while (l < r)
             {
@@ -23,6 +17,7 @@ namespace LeetCode
                     r--;
                     continue;
                 }
+
                 errorCount++;
                 break;
             }
@@ -30,10 +25,10 @@ namespace LeetCode
             if (errorCount == 0)
                 return true;
 
-            int errorL = l;
-            int errorR = r;
+            var errorL = l;
+            var errorR = r;
 
-            bool bl = true;
+            var bl = true;
 
             l = errorL + 1;
             r = errorR;
@@ -53,7 +48,7 @@ namespace LeetCode
             if (bl)
                 return true;
 
-            bool br = true;
+            var br = true;
             l = errorL;
             r = errorR - 1;
             while (l < r)

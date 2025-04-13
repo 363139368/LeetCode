@@ -6,10 +6,10 @@ namespace LeetCode
     {
         public int FindMaxConsecutiveOnes(int[] nums)
         {
-            bool flag = false;
-            int result = 0;
-            int count = 0;
-            for (int i = 0; i < nums.Length; i++)
+            var flag = false;
+            var result = 0;
+            var count = 0;
+            for (var i = 0; i < nums.Length; i++)
             {
                 var cur = nums[i];
                 if (cur == 0)
