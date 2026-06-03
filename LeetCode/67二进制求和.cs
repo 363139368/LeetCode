@@ -8,10 +8,10 @@ namespace LeetCode
         {
             private char m_zero = '0';
             private char m_one = '1';
-            public string AddBinary(string a, string b) {
+            //public string AddBinary(string a, string b) {
         
   
-            }
+            //}
 
 
         }
