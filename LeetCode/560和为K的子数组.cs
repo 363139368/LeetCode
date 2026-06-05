@@ -23,31 +23,12 @@ namespace LeetCode
                     sums[i] = sums[i - 1] + nums[i];
                 }
             }
-            int left = 0;
             int right = 1;
+            bool isRightForward = false;
             int res = 0;
-            while (left <= nums.Length - 2)
+            for (int left = 0; left < nums.Length - 2; left++)
             {
-                if (right > nums.Length - 1) break;
-                int tmpSum = sums[right] - sums[left];
-                if (tmpSum == k) 
-                {
-                    res++;
-                    left++; 
-                    right++;
-                }
-                else if (tmpSum > k)
-                {
-                    if (right - 1 > left)
-                        right--;
-                    else
-                        left++;
-                }
-                else
-                {
-                    if (right == nums.Length - 1) left++;
-                    else right++;
-                }
+
             }
             return res;
         }
