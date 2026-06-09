@@ -13,8 +13,8 @@ namespace LeetCode
         static void Main(string[] args)
         {
             _560和为K的子数组 tmp = new _560和为K的子数组();
-            tmp.SubarraySum(new int[] { 1,1,1},2);
-            Console.WriteLine();
+            Console.WriteLine(tmp.SubarraySum(new int[] { 1, -1, 0 }, 0));
+            Console.ReadLine();
         }
     }
 }
