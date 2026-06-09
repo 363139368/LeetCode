@@ -12,8 +12,9 @@ namespace LeetCode
     {
         static void Main(string[] args)
         {
-            _34在排序数组中查找元素的第一个和最后一个位置 tmp = new _34在排序数组中查找元素的第一个和最后一个位置();
-            tmp.SearchRange(new int[] { 1,1},1);
+            _560和为K的子数组 tmp = new _560和为K的子数组();
+            tmp.SubarraySum(new int[] { 1,1,1},2);
+            Console.WriteLine();
         }
     }
 }
